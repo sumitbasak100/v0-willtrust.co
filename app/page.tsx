@@ -11,63 +11,66 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Header />
-      {/* Standardized hero heading size and corrected branding */}
+      {/* Hero Section */}
       <section className="bg-background py-16 lg:py-24 overflow-hidden">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2 items-center">
             <div className="order-2 lg:order-1">
-              <div className="mb-6 inline-flex items-center rounded-full bg-primary/10 px-4 py-1.5 text-xs font-bold text-primary uppercase tracking-widest">
+              <div className="mb-4 inline-flex items-center rounded-full bg-primary/10 px-4 py-1.5 text-xs font-bold text-primary uppercase tracking-widest">
                 Estate Planning Made Simple
               </div>
-              <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal text-foreground leading-[1.1] mb-8">
+              <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal text-foreground leading-[1.1] mb-6">
                 Trust and Will: Understanding the Key Differences
               </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed mb-10 max-w-xl">
+              <p className="text-xl text-muted-foreground leading-relaxed mb-8 max-w-xl">
                 Protect your assets, provide for your loved ones, and ensure your wishes are carried out effectively
                 with proper estate planning guidance.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 mb-10">
-                <Button size="lg" className="bg-primary text-white hover:bg-primary/90">
-                  Start Planning Today <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-primary text-primary hover:bg-primary/5 bg-transparent"
-                >
-                  Learn More
-                </Button>
+              <div className="flex flex-col sm:flex-row gap-3 mb-8">
+                <Link href="/contact">
+                  <Button size="lg" className="bg-primary text-white hover:bg-primary/90 w-full sm:w-auto">
+                    Get Started Today <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+                <Link href="/about">
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-primary text-primary hover:bg-primary/5 bg-transparent w-full sm:w-auto"
+                  >
+                    Learn More
+                  </Button>
+                </Link>
               </div>
-              <div className="flex flex-wrap gap-6 text-sm text-muted-foreground">
+              <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-primary" />
+                  <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0" />
                   <span>Free consultation</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-primary" />
+                  <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0" />
                   <span>Expert guidance</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-primary" />
+                  <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0" />
                   <span>Secure & confidential</span>
                 </div>
               </div>
             </div>
-            <div className="order-1 lg:order-2 relative h-[400px] lg:h-[550px] rounded-2xl overflow-hidden shadow-2xl">
-              <Image
-                src="/warm-family-gathering-dinner-table.jpg"
-                alt="Happy family sharing a meal"
-                fill
-                className="object-cover"
-                priority
-              />
-              <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg flex items-center gap-3">
+            <div className="order-1 lg:order-2 relative h-[400px] lg:h-[550px] rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-primary/5 to-accent/5">
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="text-center p-8">
+                  <Shield className="h-32 w-32 text-primary/20 mx-auto mb-6" />
+                  <p className="text-2xl font-serif text-muted-foreground">Protecting Your Legacy</p>
+                </div>
+              </div>
+              <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-lg flex items-center gap-3">
                 <div className="bg-primary/10 p-2 rounded-lg">
                   <Users className="h-6 w-6 text-primary" />
                 </div>
                 <div>
                   <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Trusted by</p>
-                  <p className="text-lg font-serif font-bold text-primary">100,000+ families</p>
+                  <p className="text-lg font-serif font-bold text-primary">10,000+ families</p>
                 </div>
               </div>
             </div>
@@ -79,90 +82,93 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-20">
             {/* Will Column */}
-            <div id="will" className="space-y-8">
+            <div id="will" className="space-y-6">
               <div>
-                <p className="text-xs font-bold uppercase tracking-widest text-primary mb-4">Foundation of Planning</p>
-                <h2 className="font-serif text-4xl sm:text-5xl mb-6">What Is a Will?</h2>
+                <p className="text-xs font-bold uppercase tracking-widest text-primary mb-3">Foundation of Planning</p>
+                <h2 className="font-serif text-4xl sm:text-5xl mb-4">What Is a Will?</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   A Will, formally called a Last Will and Testament, is an ambulatory legal document that states how a
                   person&apos;s assets should be distributed after their death. It provides clarity and legal authority
                   for families.
                 </p>
               </div>
-              <div className="grid sm:grid-cols-2 gap-4 mb-8">
+              <div className="grid sm:grid-cols-2 gap-4">
                 <Card className="p-5 border-border shadow-none hover:border-primary transition-colors">
                   <FileText className="h-8 w-8 text-primary mb-3" />
-                  <h3 className="font-serif font-bold mb-1">Asset Distribution</h3>
-                  <p className="text-xs text-muted-foreground">Clearly states how your assets should be shared.</p>
+                  <h3 className="font-serif font-bold mb-2">Asset Distribution</h3>
+                  <p className="text-sm text-muted-foreground">Clearly states how your assets should be shared.</p>
                 </Card>
                 <Card className="p-5 border-border shadow-none hover:border-primary transition-colors">
                   <Users className="h-8 w-8 text-primary mb-3" />
-                  <h3 className="font-serif font-bold mb-1">Guardian Designation</h3>
-                  <p className="text-xs text-muted-foreground">Name guardians for minor children or dependents.</p>
+                  <h3 className="font-serif font-bold mb-2">Guardian Designation</h3>
+                  <p className="text-sm text-muted-foreground">Name guardians for minor children or dependents.</p>
                 </Card>
                 <Card className="p-5 border-border shadow-none hover:border-primary transition-colors">
                   <Shield className="h-8 w-8 text-primary mb-3" />
-                  <h3 className="font-serif font-bold mb-1">Executor Appointment</h3>
-                  <p className="text-xs text-muted-foreground">Designate a person to manage your final estate.</p>
+                  <h3 className="font-serif font-bold mb-2">Executor Appointment</h3>
+                  <p className="text-sm text-muted-foreground">Designate a person to manage your final estate.</p>
                 </Card>
                 <Card className="p-5 border-border shadow-none hover:border-primary transition-colors">
                   <Clock className="h-8 w-8 text-primary mb-3" />
-                  <h3 className="font-serif font-bold mb-1">Probate Process</h3>
-                  <p className="text-xs text-muted-foreground">Goes through court-supervised validation after death.</p>
+                  <h3 className="font-serif font-bold mb-2">Probate Process</h3>
+                  <p className="text-sm text-muted-foreground">Goes through court-supervised validation after death.</p>
                 </Card>
               </div>
-              <Button
-                variant="outline"
-                className="border-primary text-primary hover:bg-primary/5 bg-transparent"
-                asChild
-              >
-                <Link href="/what-is-a-will">Learn more about Wills</Link>
-              </Button>
+              <Link href="/what-is-a-will">
+                <Button
+                  variant="outline"
+                  className="border-primary text-primary hover:bg-primary/5 bg-transparent"
+                >
+                  Learn more about Wills
+                </Button>
+              </Link>
             </div>
 
             {/* Trust Column */}
-            <div id="trust" className="space-y-8">
+            <div id="trust" className="space-y-6">
               <div>
-                <p className="text-xs font-bold uppercase tracking-widest text-accent mb-4">Advanced Protection</p>
-                <h2 className="font-serif text-4xl sm:text-5xl mb-6">What Is a Trust?</h2>
+                <p className="text-xs font-bold uppercase tracking-widest text-accent mb-3">Advanced Protection</p>
+                <h2 className="font-serif text-4xl sm:text-5xl mb-4">What Is a Trust?</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   A Trust is a legal arrangement where assets are placed under the control of a trustee for the benefit
                   of beneficiaries. It can take effect during your lifetime and avoid probate.
                 </p>
               </div>
-              <div className="grid sm:grid-cols-2 gap-4 mb-8">
+              <div className="grid sm:grid-cols-2 gap-4">
                 <Card className="p-5 border-border shadow-none hover:border-accent transition-colors">
                   <Clock className="h-8 w-8 text-accent mb-3" />
-                  <h3 className="font-serif font-bold mb-1">Avoids Probate</h3>
-                  <p className="text-xs text-muted-foreground">
+                  <h3 className="font-serif font-bold mb-2">Avoids Probate</h3>
+                  <p className="text-sm text-muted-foreground">
                     Assets transfer directly to beneficiaries without court.
                   </p>
                 </Card>
                 <Card className="p-5 border-border shadow-none hover:border-accent transition-colors">
                   <Eye className="h-8 w-8 text-accent mb-3" />
-                  <h3 className="font-serif font-bold mb-1">Privacy Protection</h3>
-                  <p className="text-xs text-muted-foreground">
+                  <h3 className="font-serif font-bold mb-2">Privacy Protection</h3>
+                  <p className="text-sm text-muted-foreground">
                     Remains private and doesn&apos;t become part of public record.
                   </p>
                 </Card>
                 <Card className="p-5 border-border shadow-none hover:border-accent transition-colors">
                   <Heart className="h-8 w-8 text-accent mb-3" />
-                  <h3 className="font-serif font-bold mb-1">Incapacity Planning</h3>
-                  <p className="text-xs text-muted-foreground">
+                  <h3 className="font-serif font-bold mb-2">Incapacity Planning</h3>
+                  <p className="text-sm text-muted-foreground">
                     Manage affairs immediately if you become unable to do so.
                   </p>
                 </Card>
                 <Card className="p-5 border-border shadow-none hover:border-accent transition-colors">
                   <Lock className="h-8 w-8 text-accent mb-3" />
-                  <h3 className="font-serif font-bold mb-1">Asset Control</h3>
-                  <p className="text-xs text-muted-foreground">
+                  <h3 className="font-serif font-bold mb-2">Asset Control</h3>
+                  <p className="text-sm text-muted-foreground">
                     Specify how and when beneficiaries receive inheritance.
                   </p>
                 </Card>
               </div>
-              <Button variant="outline" className="border-accent text-accent hover:bg-accent/5 bg-transparent" asChild>
-                <Link href="/what-is-a-trust">Read our guide on Trusts</Link>
-              </Button>
+              <Link href="/what-is-a-trust">
+                <Button variant="outline" className="border-accent text-accent hover:bg-accent/5 bg-transparent">
+                  Read our guide on Trusts
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -171,7 +177,7 @@ export default function Home() {
       <section className="py-24 bg-background">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="text-xs font-bold uppercase tracking-widest text-muted mb-4">Side by Side</p>
+            <p className="text-xs font-bold uppercase tracking-widest text-muted mb-3">Side by Side</p>
             <h2 className="font-serif text-3xl sm:text-4xl mb-4">Trust vs. Will: Key Differences</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Understanding these differences helps you make informed decisions about your estate planning strategy.
@@ -208,10 +214,12 @@ export default function Home() {
               </table>
             </div>
           </Card>
-          <div className="mt-10 text-center">
-            <Button variant="link" className="text-primary font-bold" asChild>
-              <Link href="/examples">View real-life examples →</Link>
-            </Button>
+          <div className="mt-8 text-center">
+            <Link href="/examples">
+              <Button variant="link" className="text-primary font-bold">
+                View real-life examples →
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -220,14 +228,14 @@ export default function Home() {
       <section className="py-24 bg-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="text-xs font-bold uppercase tracking-widest text-muted mb-4">Executor Roadmap</p>
+            <p className="text-xs font-bold uppercase tracking-widest text-muted mb-3">Executor Roadmap</p>
             <h2 className="font-serif text-4xl mb-4">Estate Planning Checklist</h2>
             <p className="text-muted-foreground">
               Follow these essential steps from our legal guide to ensure your legacy is secure.
             </p>
           </div>
           <Card className="p-8 lg:p-12 bg-background border-border shadow-sm">
-            <div className="space-y-8">
+            <div className="space-y-6">
               {[
                 "Inventory your assets: Identify real estate, bank accounts, and digital assets.",
                 "Choose your roles: Name a trusted Executor and a Successor Trustee.",
@@ -236,11 +244,11 @@ export default function Home() {
                 "Update titles: Transfer property into your Living Trust (funding).",
                 "Periodic Review: Update your plan after major life events (marriage, birth, divorce).",
               ].map((step, i) => (
-                <div key={i} className="flex gap-6 items-start">
+                <div key={i} className="flex gap-4 items-start">
                   <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm">
                     {i + 1}
                   </div>
-                  <p className="text-foreground leading-relaxed text-lg">{step}</p>
+                  <p className="text-foreground leading-relaxed pt-0.5">{step}</p>
                 </div>
               ))}
             </div>
@@ -252,7 +260,7 @@ export default function Home() {
       <section id="faq" className="py-24 bg-background">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="text-xs font-bold uppercase tracking-widest text-muted mb-4">Common Questions</p>
+            <p className="text-xs font-bold uppercase tracking-widest text-muted mb-3">Common Questions</p>
             <h2 className="font-serif text-4xl mb-4">Frequently Asked Questions</h2>
             <p className="text-muted-foreground">Get answers to the most common questions about Trusts and Wills.</p>
           </div>
@@ -287,48 +295,47 @@ export default function Home() {
               </AccordionItem>
             ))}
           </Accordion>
-          <div className="mt-12 text-center">
-            <Button variant="outline" className="border-primary text-primary bg-transparent" asChild>
-              <Link href="/faq">View all FAQs</Link>
-            </Button>
-          </div>
         </div>
       </section>
 
       {/* Final CTA */}
-      <section id="contact" className="py-24 bg-primary text-white overflow-hidden relative">
+      <section className="py-24 bg-primary text-white overflow-hidden relative">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-accent/10 -skew-x-12 transform translate-x-1/2" />
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl mb-8 leading-tight">
+          <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl mb-6 leading-tight">
             Ready to Secure Your Legacy?
           </h2>
-          <p className="text-xl text-primary-foreground/80 mb-12 leading-relaxed">
+          <p className="text-xl text-primary-foreground/80 mb-10 leading-relaxed">
             The difference between a Trust and Will is not just a technicality—it profoundly impacts your family&apos;s
             future. Take the first step today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="bg-white text-primary hover:bg-white/90 text-lg px-10 h-16 rounded-md shadow-2xl"
-            >
-              Start Your Estate Plan <ArrowRight className="ml-2 h-6 w-6" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white/10 text-lg px-10 h-16 rounded-md bg-transparent"
-            >
-              Schedule Consultation
-            </Button>
+            <Link href="/contact">
+              <Button
+                size="lg"
+                className="bg-white text-primary hover:bg-white/90 text-lg px-10 h-16 rounded-md shadow-2xl"
+              >
+                Start Your Estate Plan <ArrowRight className="ml-2 h-6 w-6" />
+              </Button>
+            </Link>
+            <Link href="/contact">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-white/10 text-lg px-10 h-16 rounded-md bg-transparent"
+              >
+                Contact Us Today
+              </Button>
+            </Link>
           </div>
-          <div className="mt-16 flex flex-wrap justify-center gap-10 text-primary-foreground/60">
+          <div className="mt-12 flex flex-wrap justify-center gap-8 text-primary-foreground/60">
             <div className="flex items-center gap-2">
               <Shield className="h-5 w-5" />
               <span>Free Initial Consultation</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle2 className="h-5 w-5" />
-              <span>Attorney Reviewed Documents</span>
+              <span>Expert Legal Guidance</span>
             </div>
             <div className="flex items-center gap-2">
               <Lock className="h-5 w-5" />
