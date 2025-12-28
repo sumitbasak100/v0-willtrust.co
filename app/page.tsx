@@ -1,61 +1,17 @@
-import { ArrowRight, Shield, CheckCircle2, FileText, Users, Clock, Eye, Heart, Lock, Scale } from "lucide-react"
+import { ArrowRight, Shield, CheckCircle2, FileText, Users, Clock, Eye, Heart, Lock } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import Link from "next/link"
 import Image from "next/image"
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <header className="border-b border-border bg-white sticky top-0 z-50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex h-16 items-center justify-between">
-            <Link href="/" className="flex items-center gap-2">
-              <Shield className="h-6 w-6 text-primary" />
-              <span className="font-serif text-xl font-bold text-primary">WillTrust</span>
-            </Link>
-            <nav className="hidden md:flex items-center gap-8">
-              <Link
-                href="/what-is-a-will"
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-              >
-                What is a Will?
-              </Link>
-              <Link
-                href="/what-is-a-trust"
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-              >
-                What is a Trust?
-              </Link>
-              <Link
-                href="/what-is-probate"
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-              >
-                Probate
-              </Link>
-              <Link
-                href="/examples"
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-              >
-                Examples
-              </Link>
-              <Link
-                href="/about"
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-              >
-                About
-              </Link>
-            </nav>
-            <div className="flex items-center gap-4">
-              <Button size="sm" className="bg-primary text-white hover:bg-primary/90">
-                Get Started
-              </Button>
-            </div>
-          </div>
-        </div>
-      </header>
-
+      <Header />
+      {/* Standardized hero heading size and corrected branding */}
       <section className="bg-background py-16 lg:py-24 overflow-hidden">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2 items-center">
@@ -63,7 +19,7 @@ export default function Home() {
               <div className="mb-6 inline-flex items-center rounded-full bg-primary/10 px-4 py-1.5 text-xs font-bold text-primary uppercase tracking-widest">
                 Estate Planning Made Simple
               </div>
-              <h1 className="font-serif text-4xl sm:text-5xl lg:text-7xl font-normal text-foreground leading-[1.1] mb-8">
+              <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal text-foreground leading-[1.1] mb-8">
                 Trust and Will: Understanding the Key Differences
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed mb-10 max-w-xl">
@@ -128,8 +84,9 @@ export default function Home() {
                 <p className="text-xs font-bold uppercase tracking-widest text-primary mb-4">Foundation of Planning</p>
                 <h2 className="font-serif text-4xl sm:text-5xl mb-6">What Is a Will?</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  A Will, formally called a Last Will and Testament, is a legal document that states how a person&apos;s
-                  assets should be distributed after their death. It provides clarity and legal authority for families.
+                  A Will, formally called a Last Will and Testament, is an ambulatory legal document that states how a
+                  person&apos;s assets should be distributed after their death. It provides clarity and legal authority
+                  for families.
                 </p>
               </div>
               <div className="grid sm:grid-cols-2 gap-4 mb-8">
@@ -259,80 +216,25 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-28 bg-primary text-white relative">
-        <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-5" />
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <p className="text-xs font-bold uppercase tracking-widest text-primary-foreground/70 mb-4">
-              Why it matters
-            </p>
-            <h2 className="font-serif text-4xl sm:text-5xl mb-6">Benefits of Proper Estate Planning</h2>
-            <p className="text-primary-foreground/80 max-w-3xl mx-auto text-lg">
-              Using a Trust and Will together provides comprehensive protection for your assets and loved ones.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Users,
-                title: "Protect Your Family",
-                desc: "Ensure minor children are cared for by trusted guardians while their inheritance is managed responsibly.",
-              },
-              {
-                icon: Clock,
-                title: "Save Time & Money",
-                desc: "Avoid lengthy probate processes that can delay access to property and funds for months or years.",
-              },
-              {
-                icon: Eye,
-                title: "Maintain Privacy",
-                desc: "Keep your financial affairs private. Trusts don't become public record like Wills do.",
-              },
-              {
-                icon: Heart,
-                title: "Plan for Incapacity",
-                desc: "A Trust provides immediate authority if you become unable to manage your own affairs.",
-              },
-              {
-                icon: Shield,
-                title: "Control Distribution",
-                desc: "Specify how, when, and under what conditions beneficiaries receive their inheritance.",
-              },
-              {
-                icon: Scale,
-                title: "Reduce Disputes",
-                desc: "Clear documentation helps prevent family conflicts and expensive legal battles.",
-              },
-            ].map((benefit, i) => (
-              <Card key={i} className="bg-white/10 border-white/20 p-8 hover:bg-white/15 transition-colors group">
-                <benefit.icon className="h-10 w-10 text-accent mb-6 group-hover:scale-110 transition-transform" />
-                <h3 className="font-serif text-2xl mb-4">{benefit.title}</h3>
-                <p className="text-primary-foreground/70 leading-relaxed">{benefit.desc}</p>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Checklist Section */}
       <section className="py-24 bg-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="text-xs font-bold uppercase tracking-widest text-muted mb-4">Get Started</p>
+            <p className="text-xs font-bold uppercase tracking-widest text-muted mb-4">Executor Roadmap</p>
             <h2 className="font-serif text-4xl mb-4">Estate Planning Checklist</h2>
             <p className="text-muted-foreground">
-              Follow these essential steps to ensure your estate plan is comprehensive and effective.
+              Follow these essential steps from our legal guide to ensure your legacy is secure.
             </p>
           </div>
           <Card className="p-8 lg:p-12 bg-background border-border shadow-sm">
             <div className="space-y-8">
               {[
-                "Determine if a Trust is appropriate based on your assets and family needs.",
-                "Create or update your Will to reflect guardianship and backup distribution plans.",
-                "Properly fund any Trust to include all significant assets.",
-                "Name competent trustees and executors who understand their legal responsibilities.",
-                "Review and update your estate plan periodically or after major life events.",
-                "Consult an experienced estate planning attorney to ensure legal compliance.",
+                "Inventory your assets: Identify real estate, bank accounts, and digital assets.",
+                "Choose your roles: Name a trusted Executor and a Successor Trustee.",
+                "Designate guardians: Essential for families with minor children.",
+                "Coordinate with beneficiaries: Ensure your Will and Trust work in harmony.",
+                "Update titles: Transfer property into your Living Trust (funding).",
+                "Periodic Review: Update your plan after major life events (marriage, birth, divorce).",
               ].map((step, i) => (
                 <div key={i} className="flex gap-6 items-start">
                   <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm">
@@ -436,109 +338,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-footer text-footer-foreground pt-20 pb-10">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-            <div className="lg:col-span-1">
-              <Link href="/" className="flex items-center gap-2 mb-6">
-                <Shield className="h-8 w-8 text-accent" />
-                <span className="font-serif text-2xl font-bold text-white">WillTrust</span>
-              </Link>
-              <p className="text-footer-foreground/60 leading-relaxed mb-6">
-                Helping families protect their legacy with comprehensive, compassion-led estate planning solutions.
-                Trust and Will guidance you can count on.
-              </p>
-              <p className="text-sm font-medium">© 2025 WillTrust. All rights reserved.</p>
-            </div>
-            <div>
-              <h3 className="text-white font-serif text-xl mb-6">Estate Planning</h3>
-              <ul className="space-y-4 text-footer-foreground/60">
-                <li>
-                  <Link href="/what-is-a-will" className="hover:text-accent transition-colors">
-                    What is a Will?
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/what-is-a-trust" className="hover:text-accent transition-colors">
-                    What is a Trust?
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/what-is-probate" className="hover:text-accent transition-colors">
-                    What is Probate?
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/examples" className="hover:text-accent transition-colors">
-                    Trust & Will Examples
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-white font-serif text-xl mb-6">Resources</h3>
-              <ul className="space-y-4 text-footer-foreground/60">
-                <li>
-                  <Link href="/" className="hover:text-accent transition-colors">
-                    Estate Planning Guide
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/#faq" className="hover:text-accent transition-colors">
-                    FAQs
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/" className="hover:text-accent transition-colors">
-                    Planning Checklist
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-white font-serif text-xl mb-6">Company</h3>
-              <ul className="space-y-4 text-footer-foreground/60">
-                <li>
-                  <Link href="/about" className="hover:text-accent transition-colors">
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact" className="hover:text-accent transition-colors">
-                    Contact Us
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/terms" className="hover:text-accent transition-colors">
-                    Terms & Conditions
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/privacy" className="hover:text-accent transition-colors">
-                    Privacy Policy
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-white/10 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
-            <p className="text-xs text-footer-foreground/40 text-center md:text-left max-w-2xl leading-relaxed">
-              Legal Disclaimer: This information is for educational purposes only and does not constitute legal,
-              financial, or tax advice. We recommend consulting with a qualified professional in your jurisdiction
-              before making final estate planning decisions.
-            </p>
-            <div className="flex gap-8 text-xs text-footer-foreground/40">
-              <Link href="/privacy" className="hover:text-white transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="hover:text-white transition-colors">
-                Terms of Service
-              </Link>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </main>
   )
 }

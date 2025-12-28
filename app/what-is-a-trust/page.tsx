@@ -2,53 +2,13 @@ import { ArrowRight, Shield, Lock, Users, Clock, CheckCircle2, Scale, TrendingUp
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import Link from "next/link"
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
 
 export default function WhatIsATrustPage() {
   return (
     <main className="min-h-screen">
-      {/* Header */}
-      <header className="border-b border-border bg-white sticky top-0 z-50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex h-16 items-center justify-between">
-            <Link href="/" className="flex items-center gap-2">
-              <Shield className="h-6 w-6 text-primary" />
-              <span className="font-serif text-xl font-bold text-primary">WillTrust</span>
-            </Link>
-            <nav className="hidden md:flex items-center gap-8">
-              <Link
-                href="/what-is-a-will"
-                className="text-sm text-muted-foreground hover:text-primary transition-colors"
-              >
-                What is a Will?
-              </Link>
-              <Link href="/what-is-a-trust" className="text-sm text-primary font-bold transition-colors">
-                What is a Trust?
-              </Link>
-              <Link
-                href="/what-is-probate"
-                className="text-sm text-muted-foreground hover:text-primary transition-colors"
-              >
-                Probate
-              </Link>
-              <Link href="/examples" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                Examples
-              </Link>
-              <Link href="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                About
-              </Link>
-              <Link href="/#faq" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                FAQs
-              </Link>
-            </nav>
-            <div className="flex items-center gap-4">
-              <Button size="sm" className="bg-primary text-white hover:bg-primary/90">
-                Get Started
-              </Button>
-            </div>
-          </div>
-        </div>
-      </header>
-
+      <Header />
       {/* Hero Section */}
       <section className="bg-background py-16 lg:py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
@@ -673,80 +633,7 @@ export default function WhatIsATrustPage() {
         </div>
       </article>
 
-      {/* Footer */}
-      <footer className="bg-[#1e3d33] py-12 lg:py-16 text-[#c4dcd3]">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4 mb-12">
-            <div className="lg:col-span-1">
-              <Link href="/" className="flex items-center gap-2 mb-4">
-                <Shield className="h-5 w-5 text-primary" />
-                <span className="font-serif text-lg font-medium text-white">EstatePlan</span>
-              </Link>
-              <p className="text-sm leading-relaxed mb-4">
-                Helping families protect their legacy with comprehensive estate planning solutions.
-              </p>
-              <p className="text-xs text-[#8a9e96]">© 2025 EstatePlan. All rights reserved.</p>
-            </div>
-
-            <div>
-              <h3 className="font-serif text-base font-medium text-white mb-4">Estate Planning</h3>
-              <ul className="space-y-3 text-sm">
-                <li>
-                  <Link href="/what-is-a-will" className="hover:text-white transition-colors">
-                    What is a Will?
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/what-is-a-trust" className="hover:text-white transition-colors">
-                    What is a Trust?
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/what-is-probate" className="hover:text-white transition-colors">
-                    Probate
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-serif text-base font-medium text-white mb-4">Resources</h3>
-              <ul className="space-y-3 text-sm">
-                <li>
-                  <Link href="/" className="hover:text-white transition-colors">
-                    Estate Planning Guide
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/#faq" className="hover:text-white transition-colors">
-                    FAQs
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-serif text-base font-medium text-white mb-4">Company</h3>
-              <ul className="space-y-3 text-sm">
-                <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Contact Us
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-primary pt-8 text-xs text-[#8a9e96] text-center">
-            <p>This information is for educational purposes only and does not constitute legal advice.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </main>
   )
 }
