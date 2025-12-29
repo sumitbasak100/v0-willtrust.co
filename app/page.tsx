@@ -57,13 +57,14 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="order-1 lg:order-2 relative h-[400px] lg:h-[550px] rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-primary/5 to-accent/5">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center p-8">
-                  <Shield className="h-32 w-32 text-primary/20 mx-auto mb-6" />
-                  <p className="text-2xl font-serif text-muted-foreground">Protecting Your Legacy</p>
-                </div>
-              </div>
+            <div className="order-1 lg:order-2 relative h-[400px] lg:h-[550px] rounded-2xl overflow-hidden shadow-2xl">
+              <Image
+                src="/warm-family-gathering-dinner-table.jpg"
+                alt="Happy family sharing a meal together"
+                fill
+                className="object-cover"
+                priority
+              />
               <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-lg flex items-center gap-3">
                 <div className="bg-primary/10 p-2 rounded-lg">
                   <Users className="h-6 w-6 text-primary" />
@@ -94,23 +95,23 @@ export default function Home() {
               </div>
               <div className="grid sm:grid-cols-2 gap-4">
                 <Card className="p-5 border-border shadow-none hover:border-primary transition-colors">
-                  <FileText className="h-8 w-8 text-primary mb-3" />
-                  <h3 className="font-serif font-bold mb-2">Asset Distribution</h3>
+                  <FileText className="h-8 w-8 text-primary mb-2" />
+                  <h3 className="font-serif font-bold mb-1.5">Asset Distribution</h3>
                   <p className="text-sm text-muted-foreground">Clearly states how your assets should be shared.</p>
                 </Card>
                 <Card className="p-5 border-border shadow-none hover:border-primary transition-colors">
-                  <Users className="h-8 w-8 text-primary mb-3" />
-                  <h3 className="font-serif font-bold mb-2">Guardian Designation</h3>
+                  <Users className="h-8 w-8 text-primary mb-2" />
+                  <h3 className="font-serif font-bold mb-1.5">Guardian Designation</h3>
                   <p className="text-sm text-muted-foreground">Name guardians for minor children or dependents.</p>
                 </Card>
                 <Card className="p-5 border-border shadow-none hover:border-primary transition-colors">
-                  <Shield className="h-8 w-8 text-primary mb-3" />
-                  <h3 className="font-serif font-bold mb-2">Executor Appointment</h3>
+                  <Shield className="h-8 w-8 text-primary mb-2" />
+                  <h3 className="font-serif font-bold mb-1.5">Executor Appointment</h3>
                   <p className="text-sm text-muted-foreground">Designate a person to manage your final estate.</p>
                 </Card>
                 <Card className="p-5 border-border shadow-none hover:border-primary transition-colors">
-                  <Clock className="h-8 w-8 text-primary mb-3" />
-                  <h3 className="font-serif font-bold mb-2">Probate Process</h3>
+                  <Clock className="h-8 w-8 text-primary mb-2" />
+                  <h3 className="font-serif font-bold mb-1.5">Probate Process</h3>
                   <p className="text-sm text-muted-foreground">Goes through court-supervised validation after death.</p>
                 </Card>
               </div>
@@ -136,29 +137,29 @@ export default function Home() {
               </div>
               <div className="grid sm:grid-cols-2 gap-4">
                 <Card className="p-5 border-border shadow-none hover:border-accent transition-colors">
-                  <Clock className="h-8 w-8 text-accent mb-3" />
-                  <h3 className="font-serif font-bold mb-2">Avoids Probate</h3>
+                  <Clock className="h-8 w-8 text-accent mb-2" />
+                  <h3 className="font-serif font-bold mb-1.5">Avoids Probate</h3>
                   <p className="text-sm text-muted-foreground">
                     Assets transfer directly to beneficiaries without court.
                   </p>
                 </Card>
                 <Card className="p-5 border-border shadow-none hover:border-accent transition-colors">
-                  <Eye className="h-8 w-8 text-accent mb-3" />
-                  <h3 className="font-serif font-bold mb-2">Privacy Protection</h3>
+                  <Eye className="h-8 w-8 text-accent mb-2" />
+                  <h3 className="font-serif font-bold mb-1.5">Privacy Protection</h3>
                   <p className="text-sm text-muted-foreground">
                     Remains private and doesn&apos;t become part of public record.
                   </p>
                 </Card>
                 <Card className="p-5 border-border shadow-none hover:border-accent transition-colors">
-                  <Heart className="h-8 w-8 text-accent mb-3" />
-                  <h3 className="font-serif font-bold mb-2">Incapacity Planning</h3>
+                  <Heart className="h-8 w-8 text-accent mb-2" />
+                  <h3 className="font-serif font-bold mb-1.5">Incapacity Planning</h3>
                   <p className="text-sm text-muted-foreground">
                     Manage affairs immediately if you become unable to do so.
                   </p>
                 </Card>
                 <Card className="p-5 border-border shadow-none hover:border-accent transition-colors">
-                  <Lock className="h-8 w-8 text-accent mb-3" />
-                  <h3 className="font-serif font-bold mb-2">Asset Control</h3>
+                  <Lock className="h-8 w-8 text-accent mb-2" />
+                  <h3 className="font-serif font-bold mb-1.5">Asset Control</h3>
                   <p className="text-sm text-muted-foreground">
                     Specify how and when beneficiaries receive inheritance.
                   </p>
