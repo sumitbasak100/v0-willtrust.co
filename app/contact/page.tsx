@@ -3,7 +3,7 @@
 import type React from "react"
 
 import { useState } from "react"
-import { Mail, CheckCircle2 } from "lucide-react"
+import { Mail, CheckCircle2, AlertCircle } from "lucide-react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
@@ -14,13 +14,30 @@ import { Card } from "@/components/ui/card"
 export default function ContactPage() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setStatus("loading")
-    // Simulate form submission
-    setTimeout(() => {
-      setStatus("success")
-    }, 1500)
+
+    const formData = new FormData(e.currentTarget)
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      })
+
+      const data = await response.json()
+
+      if (data.success) {
+        setStatus("success")
+        e.currentTarget.reset()
+      } else {
+        setStatus("error")
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error)
+      setStatus("error")
+    }
   }
 
   return (
@@ -65,21 +82,47 @@ export default function ContactPage() {
                     Send Another Message
                   </Button>
                 </div>
+              ) : status === "error" ? (
+                <div className="py-12 text-center animate-in fade-in zoom-in duration-500">
+                  <AlertCircle className="h-16 w-16 text-destructive mx-auto mb-6" />
+                  <h2 className="text-2xl font-serif mb-4">Something Went Wrong</h2>
+                  <p className="text-muted-foreground mb-8">
+                    We couldn't send your message. Please try again or contact us directly.
+                  </p>
+                  <Button onClick={() => setStatus("idle")} variant="outline">
+                    Try Again
+                  </Button>
+                </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  <input type="hidden" name="access_key" value="5902ed70-bb62-44e7-9b20-37c4e78df60e" />
+                  <input type="hidden" name="subject" value="New Contact Form Submission from Willtrust.co" />
+                  <input type="hidden" name="from_name" value="Willtrust.co Contact Form" />
+                  
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label className="text-sm font-medium text-foreground">First Name</label>
-                      <Input placeholder="Jane" required className="bg-background border-border" />
+                      <Input 
+                        name="first_name"
+                        placeholder="Jane" 
+                        required 
+                        className="bg-background border-border"
+                      />
                     </div>
                     <div className="space-y-2">
                       <label className="text-sm font-medium text-foreground">Last Name</label>
-                      <Input placeholder="Doe" required className="bg-background border-border" />
+                      <Input 
+                        name="last_name"
+                        placeholder="Doe" 
+                        required 
+                        className="bg-background border-border"
+                      />
                     </div>
                   </div>
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-foreground">Email Address</label>
                     <Input
+                      name="email"
                       type="email"
                       placeholder="jane@example.com"
                       required
@@ -88,7 +131,10 @@ export default function ContactPage() {
                   </div>
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-foreground">Inquiry Type</label>
-                    <select className="w-full h-10 px-3 rounded-md border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring cursor-pointer">
+                    <select 
+                      name="inquiry_type"
+                      className="w-full h-10 px-3 rounded-md border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring cursor-pointer"
+                    >
                       <option>General Estate Planning</option>
                       <option>Will Creation</option>
                       <option>Living Trust Setup</option>
@@ -98,6 +144,7 @@ export default function ContactPage() {
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-foreground">How can we help?</label>
                     <Textarea
+                      name="message"
                       placeholder="Share a few details about your situation..."
                       className="min-h-[120px] bg-background border-border"
                       required
