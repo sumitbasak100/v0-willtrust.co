@@ -156,16 +156,20 @@ export default function ExamplesPage() {
             future.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-primary hover:bg-white/90 px-10 h-16 rounded-md">
-              Start Your Estate Plan <ArrowRight className="ml-2 h-6 w-6" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white/10 px-10 h-16 rounded-md bg-transparent"
-            >
-              Schedule Consultation
-            </Button>
+            <Link href="/contact">
+              <Button size="lg" className="bg-white text-primary hover:bg-white/90 px-10 h-16 rounded-md w-full sm:w-auto">
+                Start Your Estate Plan <ArrowRight className="ml-2 h-6 w-6" />
+              </Button>
+            </Link>
+            <Link href="/contact">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-white/10 px-10 h-16 rounded-md bg-transparent w-full sm:w-auto"
+              >
+                Contact Us Today
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
