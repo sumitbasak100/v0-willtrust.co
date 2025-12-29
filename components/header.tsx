@@ -4,7 +4,6 @@ import Link from "next/link"
 import { Shield, Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
-import { cn } from "@/lib/utils"
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -14,7 +13,7 @@ export function Header() {
     { href: "/what-is-a-trust", label: "Trusts" },
     { href: "/what-is-probate", label: "Probate" },
     { href: "/examples", label: "Examples" },
-    { href: "/about", label: "About" },
+    { href: "/about", label: "About Us" },
     { href: "/contact", label: "Contact" },
   ]
 
@@ -25,6 +24,7 @@ export function Header() {
           <Link href="/" className="flex items-center gap-2 group relative z-50">
             <Shield className="h-6 w-6 text-primary group-hover:scale-110 transition-transform" />
             <span className="font-serif text-xl font-bold text-primary">Willtrust.co</span>
+            <span className="sr-only">Home</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -51,9 +51,14 @@ export function Header() {
           <button
             className="md:hidden p-2 text-foreground hover:text-primary transition-colors cursor-pointer relative z-50"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
+            aria-expanded={mobileMenuOpen}
+            aria-label={mobileMenuOpen ? "Close main menu" : "Open main menu"}
           >
-            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {mobileMenuOpen ? (
+              <X className="h-6 w-6" aria-hidden="true" />
+            ) : (
+              <Menu className="h-6 w-6" aria-hidden="true" />
+            )}
           </button>
         </div>
 

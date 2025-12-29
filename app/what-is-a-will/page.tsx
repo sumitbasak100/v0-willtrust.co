@@ -4,6 +4,28 @@ import { Card } from "@/components/ui/card"
 import Link from "next/link"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "What is a Will? Complete Guide to Last Will and Testament | WillTrust",
+  description:
+    "Learn everything about wills including types, legal requirements, probate process, and how to create a valid Last Will and Testament in the United States.",
+  keywords: [
+    "what is a will",
+    "last will and testament",
+    "types of wills",
+    "probate process",
+    "executor",
+    "testator",
+    "estate planning",
+  ],
+  openGraph: {
+    title: "What is a Will? Complete Guide to Last Will and Testament",
+    description:
+      "Learn everything about wills including types, legal requirements, probate process, and how to create a valid Last Will and Testament.",
+    type: "article",
+  },
+}
 
 export default function WhatIsAWillPage() {
   return (
@@ -411,29 +433,29 @@ export default function WhatIsAWillPage() {
 
             {/* Section 8 - Common Pitfalls */}
             <div className="mb-12">
-              <h2 className="font-serif text-3xl font-normal text-[#1a1a1a] mb-6">8. Common Pitfalls to Avoid</h2>
+              <h2 className="font-serif text-3xl font-normal text-foreground mb-6">8. Common Pitfalls to Avoid</h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Even with a will, things can go wrong. Avoid these common mistakes:
               </p>
 
               <div className="space-y-4">
-                <Card className="p-6 border-l-4 border-l-[#d4a72c] bg-[#fffef8]">
-                  <h4 className="font-medium text-[#1a1a1a] mb-2">Forgetting Beneficiary Designations</h4>
+                <Card className="p-6 border-l-4 border-l-amber-500 bg-amber-50">
+                  <h4 className="font-medium text-foreground mb-2">Forgetting Beneficiary Designations</h4>
                   <p className="text-sm text-muted-foreground">
                     Life insurance, 401(k)s, and "Transfer on Death" (TOD) bank accounts bypass the will entirely.
                   </p>
                 </Card>
 
-                <Card className="p-6 border-l-4 border-l-[#d4a72c] bg-[#fffef8]">
-                  <h4 className="font-medium text-[#1a1a1a] mb-2">Not Updating After Life Events</h4>
+                <Card className="p-6 border-l-4 border-l-amber-500 bg-amber-50">
+                  <h4 className="font-medium text-foreground mb-2">Not Updating After Life Events</h4>
                   <p className="text-sm text-muted-foreground">
                     Divorce, marriage, the birth of a child, or moving to a new state are all reasons to review and
                     update your will.
                   </p>
                 </Card>
 
-                <Card className="p-6 border-l-4 border-l-[#d4a72c] bg-[#fffef8]">
-                  <h4 className="font-medium text-[#1a1a1a] mb-2">Poor Storage</h4>
+                <Card className="p-6 border-l-4 border-l-amber-500 bg-amber-50">
+                  <h4 className="font-medium text-foreground mb-2">Poor Storage</h4>
                   <p className="text-sm text-muted-foreground">
                     Store it in a fireproof safe or with your attorney, and make sure your executor knows where it is.
                   </p>
@@ -443,7 +465,7 @@ export default function WhatIsAWillPage() {
 
             {/* Conclusion */}
             <div className="mb-12">
-              <h2 className="font-serif text-3xl font-normal text-[#1a1a1a] mb-6">Conclusion</h2>
+              <h2 className="font-serif text-3xl font-normal text-foreground mb-6">Conclusion</h2>
               <p className="text-muted-foreground leading-relaxed">
                 A will is your final voice. It provides clarity in a time of grief, protects your children&apos;s
                 future, and ensures that your hard-earned assets go to the people and causes you care about most.
@@ -456,24 +478,15 @@ export default function WhatIsAWillPage() {
           {/* CTA Section */}
           <div className="mt-12 bg-primary rounded-2xl p-8 text-center">
             <h2 className="font-serif text-2xl sm:text-3xl font-normal text-white mb-4">Ready to Create Your Will?</h2>
-            <p className="text-[#c4dcd3] mb-6 max-w-2xl mx-auto">
+            <p className="text-primary-foreground/80 mb-6 max-w-2xl mx-auto">
               Take the first step toward comprehensive estate planning today. Protect your family&apos;s future with a
               legally sound will.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link href="/contact">
-                <Button size="lg" className="bg-white text-primary hover:bg-background w-full sm:w-auto">
+                <Button size="lg" className="bg-white text-primary hover:bg-white/90 w-full sm:w-auto">
                   Start Your Estate Plan
                   <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-              <Link href="/contact">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-white text-white hover:bg-primary/90 bg-transparent w-full sm:w-auto"
-                >
-                  Contact Us Today
                 </Button>
               </Link>
             </div>
@@ -517,16 +530,16 @@ export default function WhatIsAWillPage() {
                 </Card>
               </Link>
 
-              <Link href="/" className="group">
+              <Link href="/examples" className="group">
                 <Card className="p-6 border-border hover:shadow-lg transition-all h-full">
                   <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-background mb-4">
                     <FileText className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="font-serif text-lg font-medium text-[#1a1a1a] mb-2 group-hover:text-primary">
-                    Trust vs Will
+                    Trust vs Will Examples
                   </h3>
                   <p className="text-sm text-muted-foreground mb-4">
-                    Compare the key differences between trusts and wills to find the right solution.
+                    See real-world scenarios comparing trusts and wills in action.
                   </p>
                   <span className="text-sm text-primary font-medium inline-flex items-center gap-1">
                     Read More <ArrowRight className="h-4 w-4" />

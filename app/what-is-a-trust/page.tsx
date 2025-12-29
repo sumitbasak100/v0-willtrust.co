@@ -4,6 +4,30 @@ import { Card } from "@/components/ui/card"
 import Link from "next/link"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "What is a Trust? Complete Guide to Living Trusts | WillTrust",
+  description:
+    "Understand trusts, including revocable and irrevocable trusts, how they work, benefits of avoiding probate, and how to create a trust for estate planning.",
+  keywords: [
+    "what is a trust",
+    "living trust",
+    "revocable trust",
+    "irrevocable trust",
+    "trust fund",
+    "trustee",
+    "grantor",
+    "beneficiary",
+    "avoid probate",
+  ],
+  openGraph: {
+    title: "What is a Trust? Complete Guide to Living Trusts",
+    description:
+      "Understand trusts, including revocable and irrevocable trusts, how they work, and benefits of avoiding probate.",
+    type: "article",
+  },
+}
 
 export default function WhatIsATrustPage() {
   return (
@@ -400,7 +424,7 @@ export default function WhatIsATrustPage() {
 
             {/* Comparison Table */}
             <div className="mb-12">
-              <h2 className="font-serif text-3xl font-normal text-[#1a1a1a] mb-6">
+              <h2 className="font-serif text-3xl font-normal text-foreground mb-6">
                 Revocable vs. Irrevocable Trusts: Side-by-Side Comparison
               </h2>
 
@@ -452,7 +476,7 @@ export default function WhatIsATrustPage() {
                       },
                     ].map((row, idx) => (
                       <tr key={idx} className={idx % 2 === 0 ? "bg-background" : "bg-white"}>
-                        <td className="p-4 border-b border-border font-medium text-[#1a1a1a]">{row.feature}</td>
+                        <td className="p-4 border-b border-border font-medium text-foreground">{row.feature}</td>
                         <td className="p-4 border-b border-border text-muted-foreground text-sm">{row.revocable}</td>
                         <td className="p-4 border-b border-border text-muted-foreground text-sm">{row.irrevocable}</td>
                       </tr>
@@ -464,13 +488,13 @@ export default function WhatIsATrustPage() {
 
             {/* Decision Guide */}
             <div className="mb-12">
-              <h2 className="font-serif text-3xl font-normal text-[#1a1a1a] mb-6">
+              <h2 className="font-serif text-3xl font-normal text-foreground mb-6">
                 Choosing the Right Tool for Your Goals
               </h2>
 
               <div className="grid gap-6 md:grid-cols-2 mb-6">
                 <Card className="p-6 border-primary border-2 bg-white">
-                  <h3 className="font-serif text-xl font-medium text-[#1a1a1a] mb-4">
+                  <h3 className="font-serif text-xl font-medium text-foreground mb-4">
                     When to Choose a Revocable Living Trust
                   </h3>
                   <p className="text-sm text-muted-foreground mb-4">
@@ -497,7 +521,7 @@ export default function WhatIsATrustPage() {
                 </Card>
 
                 <Card className="p-6 border-border bg-white">
-                  <h3 className="font-serif text-xl font-medium text-[#1a1a1a] mb-4">
+                  <h3 className="font-serif text-xl font-medium text-foreground mb-4">
                     When to Choose an Irrevocable Trust
                   </h3>
                   <p className="text-sm text-muted-foreground mb-4">
@@ -554,9 +578,11 @@ export default function WhatIsATrustPage() {
 
           {/* CTA Section */}
           <div className="mt-12 bg-primary rounded-2xl p-8 text-center">
-            <h2 className="font-serif text-2xl sm:text-3xl font-normal text-white mb-4">Ready to Create Your Trust?</h2>            <p className="text-[#c4dcd3] mb-6 max-w-2xl mx-auto">
+            <h2 className="font-serif text-2xl sm:text-3xl font-normal text-white mb-4">Ready to Create Your Trust?</h2>
+            <p className="text-[#c4dcd3] mb-6 max-w-2xl mx-auto">
               Protect your assets and secure your family&apos;s future with a professionally crafted trust that meets
-              your unique needs.            </p>
+              your unique needs.
+            </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link href="/contact">
                 <Button size="lg" className="bg-white text-primary hover:bg-background w-full sm:w-auto">
@@ -614,16 +640,16 @@ export default function WhatIsATrustPage() {
                 </Card>
               </Link>
 
-              <Link href="/" className="group">
+              <Link href="/trust-vs-will-examples" className="group">
                 <Card className="p-6 border-border hover:shadow-lg transition-all h-full">
                   <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-background mb-4">
                     <Scale className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="font-serif text-lg font-medium text-[#1a1a1a] mb-2 group-hover:text-primary">
-                    Trust vs Will
+                    Trust vs Will Examples
                   </h3>
                   <p className="text-sm text-muted-foreground mb-4">
-                    Compare the key differences between trusts and wills to find the right solution.
+                    See real-world scenarios comparing trusts and wills in action.
                   </p>
                   <span className="text-sm text-primary font-medium inline-flex items-center gap-1">
                     Read More <ArrowRight className="h-4 w-4" />
