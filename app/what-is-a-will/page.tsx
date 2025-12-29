@@ -97,7 +97,7 @@ export default function WhatIsAWillPage() {
 
               <div className="grid gap-6 md:grid-cols-2 mb-8">
                 <Card className="p-6 border-border hover:shadow-md transition-shadow">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-background mb-4">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-background mb-3">
                     <FileText className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="font-serif text-lg font-medium text-[#1a1a1a] mb-3">Asset Distribution</h3>
@@ -108,7 +108,7 @@ export default function WhatIsAWillPage() {
                 </Card>
 
                 <Card className="p-6 border-border hover:shadow-md transition-shadow">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-background mb-4">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-background mb-3">
                     <Baby className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="font-serif text-lg font-medium text-[#1a1a1a] mb-3">Guardianship for Minors</h3>
@@ -119,7 +119,7 @@ export default function WhatIsAWillPage() {
                 </Card>
 
                 <Card className="p-6 border-border hover:shadow-md transition-shadow">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-background mb-4">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-background mb-3">
                     <Users className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="font-serif text-lg font-medium text-[#1a1a1a] mb-3">Appointment of an Executor</h3>
@@ -130,7 +130,7 @@ export default function WhatIsAWillPage() {
                 </Card>
 
                 <Card className="p-6 border-border hover:shadow-md transition-shadow">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-background mb-4">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-background mb-3">
                     <Clock className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="font-serif text-lg font-medium text-[#1a1a1a] mb-3">Digital Assets & Final Wishes</h3>
@@ -461,17 +461,21 @@ export default function WhatIsAWillPage() {
               legally sound will.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Button size="lg" className="bg-white text-primary hover:bg-background">
-                Start Your Estate Plan
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-primary/90 bg-transparent"
-              >
-                Schedule Consultation
-              </Button>
+              <Link href="/contact">
+                <Button size="lg" className="bg-white text-primary hover:bg-background w-full sm:w-auto">
+                  Start Your Estate Plan
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+              <Link href="/contact">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-white text-white hover:bg-primary/90 bg-transparent w-full sm:w-auto"
+                >
+                  Contact Us Today
+                </Button>
+              </Link>
             </div>
           </div>
 
