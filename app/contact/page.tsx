@@ -17,10 +17,11 @@ export default function ContactPage() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    const form = e.currentTarget
     setStatus("loading")
     setErrorMessage("")
 
-    const formData = new FormData(e.currentTarget)
+    const formData = new FormData(form)
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -32,7 +33,7 @@ export default function ContactPage() {
 
       if (response.ok && data.success) {
         setStatus("success")
-        e.currentTarget.reset()
+        form.reset()
       } else {
         setStatus("error")
         setErrorMessage(data.message || "Failed to send message. Please try again.")
