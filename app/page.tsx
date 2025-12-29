@@ -1,3 +1,5 @@
+"use client"
+
 import { ArrowRight, Shield, CheckCircle2, FileText, Users, Clock, Eye, Heart, Lock } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
@@ -6,39 +8,73 @@ import Link from "next/link"
 import Image from "next/image"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { useState } from "react"
 
 export default function Home() {
+  const [showAllFaqs, setShowAllFaqs] = useState(false)
+
+  const faqs = [
+    {
+      q: "What is the difference between a Trust and a Will?",
+      a: "A Trust is a legal arrangement that manages assets during and after your life, avoiding probate. A Will only takes effect after death and typically requires probate court oversight.",
+    },
+    {
+      q: "Do I need both a Trust and a Will?",
+      a: "Many people use both. A 'Pour-Over Will' acts as a backup to catch any assets not placed in your Trust, while also allowing you to name guardians for minor children.",
+    },
+    {
+      q: "Which is better: a Will or a Trust?",
+      a: "There's no one-size-fits-all answer. Wills are often simpler for straightforward estates, while Trusts offer more control, privacy, and probate avoidance for complex situations.",
+    },
+    {
+      q: "What happens if I die without a Will or Trust?",
+      a: "Your estate will be subject to state 'intestacy' laws. The court will determine distribution according to bloodline formulas, which may not align with your actual wishes.",
+    },
+    {
+      q: "How long does a Trust take to settle?",
+      a: "Unlike probate which can take months or years, Trust assets can often be distributed in weeks since no court intervention is required.",
+    },
+    {
+      q: "Can a Will or Trust be changed after it's created?",
+      a: "Yes, Revocable Living Trusts and Wills can be updated or revoked at any time during your lifetime, provided you are mentally competent.",
+    },
+    {
+      q: "What is probate, and how does it relate to a Will?",
+      a: "Probate is the court-supervised process of authenticating a Will. While it ensures legal transfer, it can be slow, public, and costly.",
+    },
+    {
+      q: "Does a Trust avoid estate taxes?",
+      a: "A basic Revocable Trust does not avoid estate taxes on its own, but specialized Irrevocable Trusts can be used for significant tax planning.",
+    },
+  ]
+
+  const visibleFaqs = showAllFaqs ? faqs : faqs.slice(0, 5)
+
   return (
     <main className="min-h-screen">
       <Header />
       {/* Hero Section */}
-      <section className="bg-background py-16 lg:py-24 overflow-hidden">
+      <section className="bg-background py-12 lg:py-16 overflow-hidden">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-2 items-center">
+          <div className="grid gap-8 lg:grid-cols-2 items-center">
             <div className="order-2 lg:order-1">
               <div className="mb-4 inline-flex items-center rounded-full bg-primary/10 px-4 py-1.5 text-xs font-bold text-primary uppercase tracking-widest">
                 Estate Planning Made Simple
               </div>
-              <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal text-foreground leading-[1.1] mb-6">
+              <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-foreground leading-tight mb-4">
                 Trust and Will: Understanding the Key Differences
               </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed mb-8 max-w-xl">
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6 max-w-xl">
                 Protect your assets, provide for your loved ones, and ensure your wishes are carried out effectively
                 with proper estate planning guidance.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 mb-8">
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Link href="/contact">
-                  <Button size="lg" className="bg-primary text-white hover:bg-primary/90 w-full sm:w-auto">
-                    Get Started Today <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </Link>
-                <Link href="/about">
                   <Button
                     size="lg"
-                    variant="outline"
-                    className="border-primary text-primary hover:bg-primary/5 bg-transparent w-full sm:w-auto"
+                    className="bg-primary text-white hover:bg-primary/90 w-full sm:w-auto cursor-pointer"
                   >
-                    Learn More
+                    Get Started Today <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
               </div>
@@ -95,8 +131,8 @@ export default function Home() {
               </div>
               <div className="grid sm:grid-cols-2 gap-4">
                 <Card className="p-5 border-border shadow-none hover:border-primary transition-colors">
-                  <FileText className="h-8 w-8 text-primary mb-2" />
-                  <h3 className="font-serif font-bold mb-1.5">Asset Distribution</h3>
+                  <FileText className="h-7 w-7 text-primary mb-2" />
+                  <h3 className="font-serif font-bold mb-1">Asset Distribution</h3>
                   <p className="text-sm text-muted-foreground">Clearly states how your assets should be shared.</p>
                 </Card>
                 <Card className="p-5 border-border shadow-none hover:border-primary transition-colors">
@@ -116,10 +152,7 @@ export default function Home() {
                 </Card>
               </div>
               <Link href="/what-is-a-will">
-                <Button
-                  variant="outline"
-                  className="border-primary text-primary hover:bg-primary/5 bg-transparent"
-                >
+                <Button variant="outline" className="border-primary text-primary hover:bg-primary/5 bg-transparent">
                   Learn more about Wills
                 </Button>
               </Link>
@@ -258,44 +291,35 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-24 bg-background">
+      <section id="faq" className="py-20 bg-background">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="text-xs font-bold uppercase tracking-widest text-muted mb-3">Common Questions</p>
-            <h2 className="font-serif text-4xl mb-4">Frequently Asked Questions</h2>
+          <div className="text-center mb-12">
+            <p className="text-xs font-bold uppercase tracking-widest text-muted mb-2">Common Questions</p>
+            <h2 className="font-serif text-3xl sm:text-4xl mb-4">Frequently Asked Questions</h2>
             <p className="text-muted-foreground">Get answers to the most common questions about Trusts and Wills.</p>
           </div>
           <Accordion type="single" collapsible className="space-y-4">
-            {[
-              {
-                q: "What is the difference between a Trust and a Will?",
-                a: "A Trust is a legal arrangement that manages assets during and after your life, avoiding probate. A Will only takes effect after death and typically requires probate court oversight.",
-              },
-              {
-                q: "Do I need both a Trust and a Will?",
-                a: "Many people use both. A 'Pour-Over Will' acts as a backup to catch any assets not placed in your Trust, while also allowing you to name guardians for minor children.",
-              },
-              {
-                q: "Which is better: a Will or a Trust?",
-                a: "There's no one-size-fits-all answer. Wills are often simpler for straightforward estates, while Trusts offer more control, privacy, and probate avoidance for complex situations.",
-              },
-              {
-                q: "What happens if I die without a Will or Trust?",
-                a: "Your estate will be subject to state 'intestacy' laws. The court will determine distribution according to bloodline formulas, which may not align with your actual wishes.",
-              },
-              {
-                q: "How long does a Trust take to settle?",
-                a: "Unlike probate which can take months or years, Trust assets can often be distributed in weeks since no court intervention is required.",
-              },
-            ].map((faq, i) => (
+            {visibleFaqs.map((faq, i) => (
               <AccordionItem key={i} value={`item-${i}`} className="bg-white px-6 rounded-lg border-border">
-                <AccordionTrigger className="text-left font-serif text-lg py-6 hover:no-underline">
+                <AccordionTrigger className="text-left font-serif text-lg py-5 hover:no-underline">
                   {faq.q}
                 </AccordionTrigger>
-                <AccordionContent className="pb-6 text-muted-foreground leading-relaxed">{faq.a}</AccordionContent>
+                <AccordionContent className="pb-5 text-muted-foreground leading-relaxed">{faq.a}</AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
+
+          {!showAllFaqs && (
+            <div className="mt-8 text-center">
+              <Button
+                variant="outline"
+                className="border-primary text-primary hover:bg-primary/5 cursor-pointer bg-transparent"
+                onClick={() => setShowAllFaqs(true)}
+              >
+                Show All FAQs
+              </Button>
+            </div>
+          )}
         </div>
       </section>
 

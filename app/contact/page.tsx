@@ -13,10 +13,12 @@ import { Card } from "@/components/ui/card"
 
 export default function ContactPage() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
+  const [errorMessage, setErrorMessage] = useState("")
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setStatus("loading")
+    setErrorMessage("")
 
     const formData = new FormData(e.currentTarget)
 
@@ -28,15 +30,17 @@ export default function ContactPage() {
 
       const data = await response.json()
 
-      if (data.success) {
+      if (response.ok && data.success) {
         setStatus("success")
         e.currentTarget.reset()
       } else {
         setStatus("error")
+        setErrorMessage(data.message || "Failed to send message. Please try again.")
       }
     } catch (error) {
       console.error("Error submitting form:", error)
       setStatus("error")
+      setErrorMessage("Network error. Please check your connection and try again.")
     }
   }
 
@@ -87,9 +91,9 @@ export default function ContactPage() {
                   <AlertCircle className="h-16 w-16 text-destructive mx-auto mb-6" />
                   <h2 className="text-2xl font-serif mb-4">Something Went Wrong</h2>
                   <p className="text-muted-foreground mb-8">
-                    We couldn't send your message. Please try again or contact us directly.
+                    {errorMessage || "We couldn't send your message. Please try again or contact us directly."}
                   </p>
-                  <Button onClick={() => setStatus("idle")} variant="outline">
+                  <Button onClick={() => setStatus("idle")} variant="outline" className="cursor-pointer">
                     Try Again
                   </Button>
                 </div>
@@ -98,25 +102,15 @@ export default function ContactPage() {
                   <input type="hidden" name="access_key" value="5902ed70-bb62-44e7-9b20-37c4e78df60e" />
                   <input type="hidden" name="subject" value="New Contact Form Submission from Willtrust.co" />
                   <input type="hidden" name="from_name" value="Willtrust.co Contact Form" />
-                  
+
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label className="text-sm font-medium text-foreground">First Name</label>
-                      <Input 
-                        name="first_name"
-                        placeholder="Jane" 
-                        required 
-                        className="bg-background border-border"
-                      />
+                      <Input name="first_name" placeholder="Jane" required className="bg-background border-border" />
                     </div>
                     <div className="space-y-2">
                       <label className="text-sm font-medium text-foreground">Last Name</label>
-                      <Input 
-                        name="last_name"
-                        placeholder="Doe" 
-                        required 
-                        className="bg-background border-border"
-                      />
+                      <Input name="last_name" placeholder="Doe" required className="bg-background border-border" />
                     </div>
                   </div>
                   <div className="space-y-2">
@@ -131,7 +125,7 @@ export default function ContactPage() {
                   </div>
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-foreground">Inquiry Type</label>
-                    <select 
+                    <select
                       name="inquiry_type"
                       className="w-full h-10 px-3 rounded-md border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring cursor-pointer"
                     >

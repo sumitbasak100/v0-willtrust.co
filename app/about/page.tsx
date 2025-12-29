@@ -10,29 +10,30 @@ export default function AboutPage() {
     <main className="min-h-screen">
       <Header />
       {/* Hero Section */}
-      <section className="bg-background py-16 lg:py-24">
+      <section className="bg-background py-16 lg:py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-xs font-bold uppercase tracking-widest text-primary mb-4">Our Story</p>
-          <h1 className="font-serif text-4xl sm:text-5xl lg:text-7xl font-normal text-foreground leading-[1.1] mb-8">
+          <h1 className="font-serif text-4xl sm:text-5xl font-normal text-foreground leading-[1.1] mb-8">
             Protecting Your Legacy with Compassion and Precision
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-            At Willtrust.co, we believe that a Will or a Trust is more than just a legal document—it is an act of love for
-            those you leave behind.
+            At Willtrust.co, we believe that a Will or a Trust is more than just a legal document—it is an act of love
+            for those you leave behind.
           </p>
         </div>
       </section>
 
       {/* Our Story */}
-      <section className="py-24 bg-white">
+      <section className="py-20 bg-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-serif mb-8 text-foreground">Bridging the Gap in Estate Planning</h2>
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
             <p>
-              Willtrust.co was founded on a simple but powerful observation: for too many people, estate planning feels
-              like an intimidating maze of jargon, high costs, and emotional hurdles. Our founders saw firsthand how
-              families struggled during their most vulnerable moments because their loved ones&apos; wishes hadn&apos;t
-              been clearly documented or legally secured.
+              Willtrust.co was founded in 2018 on a simple but powerful observation: for too many people, estate
+              planning feels like an intimidating maze of jargon, high costs, and emotional hurdles. Our founders,
+              seasoned estate attorneys with over 25 years of combined experience, saw firsthand how families struggled
+              during their most vulnerable moments because their loved ones&apos; wishes hadn&apos;t been clearly
+              documented or legally secured.
             </p>
             <p>
               They set out to build a platform that humanizes the law. We moved away from the &quot;cold and
@@ -134,7 +135,10 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90 px-10 h-16 rounded-md w-full sm:w-auto">
+              <Button
+                size="lg"
+                className="bg-white text-primary hover:bg-white/90 px-10 h-16 rounded-md w-full sm:w-auto"
+              >
                 Start Your Plan <ArrowRight className="ml-2 h-6 w-6" />
               </Button>
             </Link>

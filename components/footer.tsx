@@ -3,13 +3,13 @@ import { Shield } from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="bg-footer text-footer-foreground pt-20 pb-10">
+    <footer className="bg-footer text-footer-foreground pt-16 pb-10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-6 group">
-              <Shield className="h-8 w-8 text-accent group-hover:scale-110 transition-transform" />
-              <span className="font-serif text-2xl font-bold text-white">Willtrust.co</span>
+            <Link href="/" className="flex items-center gap-2 mb-4 group cursor-pointer">
+              <Shield className="h-7 w-7 text-accent group-hover:scale-110 transition-transform" />
+              <span className="font-serif text-xl font-bold text-white">Willtrust.co</span>
             </Link>
             <p className="text-footer-foreground/60 leading-relaxed mb-6 text-sm">
               Helping families protect their legacy with comprehensive, compassion-led estate planning solutions.
