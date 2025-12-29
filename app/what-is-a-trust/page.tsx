@@ -554,11 +554,9 @@ export default function WhatIsATrustPage() {
 
           {/* CTA Section */}
           <div className="mt-12 bg-primary rounded-2xl p-8 text-center">
-            <h2 className="font-serif text-2xl sm:text-3xl font-normal text-white mb-4">Ready to Create Your Will?</h2>
-            <p className="text-[#c4dcd3] mb-6 max-w-2xl mx-auto">
-              Take the first step toward comprehensive estate planning today. Protect your family&apos;s future with a
-              legally sound will.
-            </p>
+            <h2 className="font-serif text-2xl sm:text-3xl font-normal text-white mb-4">Ready to Create Your Trust?</h2>            <p className="text-[#c4dcd3] mb-6 max-w-2xl mx-auto">
+              Protect your assets and secure your family&apos;s future with a professionally crafted trust that meets
+              your unique needs.            </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link href="/contact">
                 <Button size="lg" className="bg-white text-primary hover:bg-background w-full sm:w-auto">
