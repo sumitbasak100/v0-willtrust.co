@@ -1,6 +1,6 @@
 "use client"
 
-import Link from "next/link" 
+import Link from "next/link"
 import { Shield, Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
