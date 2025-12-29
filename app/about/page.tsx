@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import Link from "next/link"
 
 export default function AboutPage() {
   return (
@@ -16,7 +17,7 @@ export default function AboutPage() {
             Protecting Your Legacy with Compassion and Precision
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-            At WillTrust, we believe that a Will or a Trust is more than just a legal document—it is an act of love for
+            At Willtrust.co, we believe that a Will or a Trust is more than just a legal document—it is an act of love for
             those you leave behind.
           </p>
         </div>
@@ -28,7 +29,7 @@ export default function AboutPage() {
           <h2 className="text-3xl md:text-4xl font-serif mb-8 text-foreground">Bridging the Gap in Estate Planning</h2>
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
             <p>
-              WillTrust was founded on a simple but powerful observation: for too many people, estate planning feels
+              Willtrust.co was founded on a simple but powerful observation: for too many people, estate planning feels
               like an intimidating maze of jargon, high costs, and emotional hurdles. Our founders saw firsthand how
               families struggled during their most vulnerable moments because their loved ones&apos; wishes hadn&apos;t
               been clearly documented or legally secured.
@@ -89,7 +90,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-serif text-center mb-16 text-foreground">What Sets Us Apart</h2>
           <div className="space-y-12">
-            <div className="flex gap-8">
+            <div className="flex gap-6">
               <Award className="h-10 w-10 text-primary flex-shrink-0" />
               <div>
                 <h3 className="text-2xl font-serif mb-4 text-foreground">Expertise You Can Trust</h3>
@@ -100,7 +101,7 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            <div className="flex gap-8">
+            <div className="flex gap-6">
               <Heart className="h-10 w-10 text-primary flex-shrink-0" />
               <div>
                 <h3 className="text-2xl font-serif mb-4 text-foreground">A Client-Centric Approach</h3>
@@ -110,7 +111,7 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            <div className="flex gap-8">
+            <div className="flex gap-6">
               <Lightbulb className="h-10 w-10 text-primary flex-shrink-0" />
               <div>
                 <h3 className="text-2xl font-serif mb-4 text-foreground">Transparent and Accessible</h3>
@@ -132,16 +133,20 @@ export default function AboutPage() {
             It is the gift of certainty in a time of grief and the gift of protection in a time of uncertainty.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-primary hover:bg-white/90 px-10 h-16 rounded-md">
-              Start Your Plan <ArrowRight className="ml-2 h-6 w-6" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white/10 px-10 h-16 rounded-md bg-transparent"
-            >
-              Contact Our Team
-            </Button>
+            <Link href="/contact">
+              <Button size="lg" className="bg-white text-primary hover:bg-white/90 px-10 h-16 rounded-md w-full sm:w-auto">
+                Start Your Plan <ArrowRight className="ml-2 h-6 w-6" />
+              </Button>
+            </Link>
+            <Link href="/contact">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-white/10 px-10 h-16 rounded-md bg-transparent w-full sm:w-auto"
+              >
+                Contact Our Team
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
