@@ -17,6 +17,7 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setStatus("loading")
+    // Simulate form submission
     setTimeout(() => {
       setStatus("success")
     }, 1500)
