@@ -63,7 +63,7 @@ export default function WhatIsATrustPage() {
 
               <div className="grid gap-6 md:grid-cols-3 mb-8">
                 <Card className="p-6 border-border hover:shadow-md transition-shadow">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-background mb-4">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-background mb-3">
                     <Users className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="font-serif text-lg font-medium text-[#1a1a1a] mb-3">The Grantor</h3>
@@ -74,7 +74,7 @@ export default function WhatIsATrustPage() {
                 </Card>
 
                 <Card className="p-6 border-border hover:shadow-md transition-shadow">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-background mb-4">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-background mb-3">
                     <Shield className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="font-serif text-lg font-medium text-[#1a1a1a] mb-3">The Trustee</h3>
@@ -85,7 +85,7 @@ export default function WhatIsATrustPage() {
                 </Card>
 
                 <Card className="p-6 border-border hover:shadow-md transition-shadow">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-background mb-4">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-background mb-3">
                     <Heart className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="font-serif text-lg font-medium text-[#1a1a1a] mb-3">The Beneficiary</h3>
@@ -109,7 +109,7 @@ export default function WhatIsATrustPage() {
 
               <div className="grid gap-6 md:grid-cols-2 mb-8">
                 <Card className="p-6 border-primary border-2 bg-white">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary mb-4">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary mb-3">
                     <CheckCircle2 className="h-6 w-6 text-white" />
                   </div>
                   <h3 className="font-serif text-xl font-medium text-[#1a1a1a] mb-4">Revocable Living Trusts (RLT)</h3>
@@ -139,7 +139,7 @@ export default function WhatIsATrustPage() {
                 </Card>
 
                 <Card className="p-6 border-border bg-white">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-background mb-4">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-background mb-3">
                     <Lock className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="font-serif text-xl font-medium text-[#1a1a1a] mb-4">Irrevocable Trusts</h3>
@@ -235,7 +235,7 @@ export default function WhatIsATrustPage() {
 
               <div className="grid gap-6 md:grid-cols-2 mb-8">
                 <Card className="p-6 border-border hover:shadow-md transition-shadow">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-background mb-4">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-background mb-3">
                     <Scale className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="font-serif text-lg font-medium text-[#1a1a1a] mb-3">Bypassing Probate Court</h3>
@@ -246,7 +246,7 @@ export default function WhatIsATrustPage() {
                 </Card>
 
                 <Card className="p-6 border-border hover:shadow-md transition-shadow">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-background mb-4">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-background mb-3">
                     <Lock className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="font-serif text-lg font-medium text-[#1a1a1a] mb-3">Privacy</h3>
@@ -257,7 +257,7 @@ export default function WhatIsATrustPage() {
                 </Card>
 
                 <Card className="p-6 border-border hover:shadow-md transition-shadow">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-background mb-4">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-background mb-3">
                     <Clock className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="font-serif text-lg font-medium text-[#1a1a1a] mb-3">Continuous Management</h3>
@@ -268,7 +268,7 @@ export default function WhatIsATrustPage() {
                 </Card>
 
                 <Card className="p-6 border-border hover:shadow-md transition-shadow">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-background mb-4">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-background mb-3">
                     <TrendingUp className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="font-serif text-lg font-medium text-[#1a1a1a] mb-3">&quot;Dead Hand&quot; Control</h3>
@@ -327,7 +327,7 @@ export default function WhatIsATrustPage() {
 
               <div className="grid gap-6 md:grid-cols-2 mb-8">
                 <Card className="p-6 border-border bg-white">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-background mb-4">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-background mb-3">
                     <Banknote className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="font-serif text-lg font-medium text-[#1a1a1a] mb-3">Grantor Trusts</h3>
@@ -339,7 +339,7 @@ export default function WhatIsATrustPage() {
                 </Card>
 
                 <Card className="p-6 border-border bg-white">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-background mb-4">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-background mb-3">
                     <Banknote className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="font-serif text-lg font-medium text-[#1a1a1a] mb-3">Non-Grantor Trusts</h3>
@@ -554,23 +554,27 @@ export default function WhatIsATrustPage() {
 
           {/* CTA Section */}
           <div className="mt-12 bg-primary rounded-2xl p-8 text-center">
-            <h2 className="font-serif text-2xl sm:text-3xl font-normal text-white mb-4">Ready to Create Your Trust?</h2>
+            <h2 className="font-serif text-2xl sm:text-3xl font-normal text-white mb-4">Ready to Create Your Will?</h2>
             <p className="text-[#c4dcd3] mb-6 max-w-2xl mx-auto">
-              Protect your assets and secure your family&apos;s future with a professionally crafted trust that meets
-              your unique needs.
+              Take the first step toward comprehensive estate planning today. Protect your family&apos;s future with a
+              legally sound will.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Button size="lg" className="bg-white text-primary hover:bg-background">
-                Start Your Estate Plan
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-primary/90 bg-transparent"
-              >
-                Schedule Consultation
-              </Button>
+              <Link href="/contact">
+                <Button size="lg" className="bg-white text-primary hover:bg-background w-full sm:w-auto">
+                  Start Your Estate Plan
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+              <Link href="/contact">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-white text-white hover:bg-primary/90 bg-transparent w-full sm:w-auto"
+                >
+                  Contact Us Today
+                </Button>
+              </Link>
             </div>
           </div>
 
