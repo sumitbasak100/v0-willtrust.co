@@ -24,7 +24,7 @@ export default function WhatIsProbatePage() {
             <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground mb-3">
               Estate Planning Guide
             </p>
-            <h1 className="font-serif text-4xl sm:text-5xl font-normal text-[#1a1a1a] mb-4 text-balance">
+            <h1 className="font-serif text-4xl sm:text-5xl font-normal text-[#1a1a1a] mb-3 text-balance">
               What is Probate?
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
@@ -166,7 +166,7 @@ export default function WhatIsProbatePage() {
 
               <div className="grid gap-6 md:grid-cols-3 mb-8">
                 <Card className="p-6 border-[#e8e3dc] hover:shadow-md transition-shadow">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#f5f2ed] mb-4">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#f5f2ed] mb-3">
                     <DollarSign className="h-6 w-6 text-[#2d5f4e]" />
                   </div>
                   <h3 className="font-serif text-lg font-medium text-[#1a1a1a] mb-3">Cost</h3>
@@ -177,7 +177,7 @@ export default function WhatIsProbatePage() {
                 </Card>
 
                 <Card className="p-6 border-[#e8e3dc] hover:shadow-md transition-shadow">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#f5f2ed] mb-4">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#f5f2ed] mb-3">
                     <Clock className="h-6 w-6 text-[#2d5f4e]" />
                   </div>
                   <h3 className="font-serif text-lg font-medium text-[#1a1a1a] mb-3">Time</h3>
@@ -188,7 +188,7 @@ export default function WhatIsProbatePage() {
                 </Card>
 
                 <Card className="p-6 border-[#e8e3dc] hover:shadow-md transition-shadow">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#f5f2ed] mb-4">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#f5f2ed] mb-3">
                     <Eye className="h-6 w-6 text-[#2d5f4e]" />
                   </div>
                   <h3 className="font-serif text-lg font-medium text-[#1a1a1a] mb-3">Privacy</h3>
@@ -333,7 +333,7 @@ export default function WhatIsProbatePage() {
 
               <Card className="p-6 border-[#2d5f4e] bg-white mb-6">
                 <h3 className="font-serif text-lg font-medium text-[#1a1a1a] mb-3">Small Estate Affidavit</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                <p className="text-sm text-muted-foreground leading-relaxed mb-3">
                   If the total value of the estate is below a certain threshold (which varies wildly from $10,000 to
                   over $150,000 depending on the state), heirs can often use a Small Estate Affidavit to collect assets
                   without ever stepping into a courtroom.
@@ -358,7 +358,7 @@ export default function WhatIsProbatePage() {
               <div className="space-y-8">
                 {/* Immediate Discovery Phase */}
                 <div>
-                  <h3 className="font-serif text-xl font-medium text-[#1a1a1a] mb-4">
+                  <h3 className="font-serif text-xl font-medium text-[#1a1a1a] mb-3">
                     1. Immediate Discovery Phase (Days 1–10)
                   </h3>
                   <div className="space-y-3">
@@ -378,7 +378,7 @@ export default function WhatIsProbatePage() {
 
                 {/* Filing & Appointment Phase */}
                 <div>
-                  <h3 className="font-serif text-xl font-medium text-[#1a1a1a] mb-4">2. Filing & Appointment Phase</h3>
+                  <h3 className="font-serif text-xl font-medium text-[#1a1a1a] mb-3">2. Filing & Appointment Phase</h3>
                   <div className="space-y-3">
                     {[
                       "Petition for Probate: The formal application to the court to open the estate",
@@ -396,7 +396,7 @@ export default function WhatIsProbatePage() {
 
                 {/* Asset & Liability Inventory */}
                 <div>
-                  <h3 className="font-serif text-xl font-medium text-[#1a1a1a] mb-4">3. Asset & Liability Inventory</h3>
+                  <h3 className="font-serif text-xl font-medium text-[#1a1a1a] mb-3">3. Asset & Liability Inventory</h3>
                   <div className="overflow-x-auto">
                     <table className="w-full border-collapse">
                       <thead>
@@ -438,7 +438,7 @@ export default function WhatIsProbatePage() {
 
                 {/* Administrative & Tax Tasks */}
                 <div>
-                  <h3 className="font-serif text-xl font-medium text-[#1a1a1a] mb-4">4. Administrative & Tax Tasks</h3>
+                  <h3 className="font-serif text-xl font-medium text-[#1a1a1a] mb-3">4. Administrative & Tax Tasks</h3>
                   <div className="space-y-3">
                     {[
                       "Estate Bank Account: Open a dedicated account using the EIN",
@@ -458,7 +458,7 @@ export default function WhatIsProbatePage() {
 
                 {/* Final Distribution & Closing */}
                 <div>
-                  <h3 className="font-serif text-xl font-medium text-[#1a1a1a] mb-4">
+                  <h3 className="font-serif text-xl font-medium text-[#1a1a1a] mb-3">
                     5. Final Distribution & Closing
                   </h3>
                   <div className="space-y-3">
@@ -498,13 +498,21 @@ export default function WhatIsProbatePage() {
               Learn how to protect your family from the costs and delays of probate. Start your estate planning today.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Button size="lg" className="bg-white text-[#2d5f4e] hover:bg-[#f5f2ed]">
-                Start Your Estate Plan
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-[#234739] bg-transparent">
-                Schedule Consultation
-              </Button>
+              <Link href="/contact">
+                <Button size="lg" className="bg-white text-primary hover:bg-background w-full sm:w-auto">
+                  Start Your Estate Plan
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+              <Link href="/contact">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-white text-white hover:bg-primary/90 bg-transparent w-full sm:w-auto"
+                >
+                  Contact Us Today
+                </Button>
+              </Link>
             </div>
           </div>
 
@@ -514,13 +522,13 @@ export default function WhatIsProbatePage() {
             <div className="grid gap-6 md:grid-cols-3">
               <Link href="/what-is-a-will" className="group">
                 <Card className="p-6 border-[#e8e3dc] hover:shadow-lg transition-all h-full">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#f5f2ed] mb-4">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#f5f2ed] mb-3">
                     <FileText className="h-6 w-6 text-[#2d5f4e]" />
                   </div>
                   <h3 className="font-serif text-lg font-medium text-[#1a1a1a] mb-2 group-hover:text-[#2d5f4e]">
                     What is a Will?
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-4">
+                  <p className="text-sm text-muted-foreground mb-3">
                     Learn about wills and how they form the foundation of estate planning.
                   </p>
                   <span className="text-sm text-[#2d5f4e] font-medium inline-flex items-center gap-1">
@@ -531,13 +539,13 @@ export default function WhatIsProbatePage() {
 
               <Link href="/what-is-a-trust" className="group">
                 <Card className="p-6 border-[#e8e3dc] hover:shadow-lg transition-all h-full">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#f5f2ed] mb-4">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#f5f2ed] mb-3">
                     <Shield className="h-6 w-6 text-[#2d5f4e]" />
                   </div>
                   <h3 className="font-serif text-lg font-medium text-[#1a1a1a] mb-2 group-hover:text-[#2d5f4e]">
                     What is a Trust?
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-4">
+                  <p className="text-sm text-muted-foreground mb-3">
                     Discover how trusts can protect your assets and avoid probate entirely.
                   </p>
                   <span className="text-sm text-[#2d5f4e] font-medium inline-flex items-center gap-1">
@@ -548,13 +556,13 @@ export default function WhatIsProbatePage() {
 
               <Link href="/" className="group">
                 <Card className="p-6 border-[#e8e3dc] hover:shadow-lg transition-all h-full">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#f5f2ed] mb-4">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#f5f2ed] mb-3">
                     <Scale className="h-6 w-6 text-[#2d5f4e]" />
                   </div>
                   <h3 className="font-serif text-lg font-medium text-[#1a1a1a] mb-2 group-hover:text-[#2d5f4e]">
                     Trust vs Will
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-4">
+                  <p className="text-sm text-muted-foreground mb-3">
                     Compare the key differences between trusts and wills to find the right solution.
                   </p>
                   <span className="text-sm text-[#2d5f4e] font-medium inline-flex items-center gap-1">
