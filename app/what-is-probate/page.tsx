@@ -4,6 +4,27 @@ import { Card } from "@/components/ui/card"
 import Link from "next/link"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "What is Probate? Understanding the Court Process | WillTrust",
+  description:
+    "Learn about the probate process, how long it takes, costs involved, and how to avoid probate through proper estate planning with trusts.",
+  keywords: [
+    "what is probate",
+    "probate process",
+    "probate court",
+    "avoid probate",
+    "estate administration",
+    "executor duties",
+    "intestacy",
+  ],
+  openGraph: {
+    title: "What is Probate? Understanding the Court Process",
+    description: "Learn about the probate process, how long it takes, costs involved, and how to avoid probate.",
+    type: "article",
+  },
+}
 
 export default function WhatIsProbatePage() {
   return (
@@ -518,52 +539,69 @@ export default function WhatIsProbatePage() {
 
           {/* Related Articles */}
           <div className="mt-16">
-            <h2 className="font-serif text-2xl font-normal text-[#1a1a1a] mb-6">Related Articles</h2>
+            <h2 className="font-serif text-2xl font-normal text-foreground mb-6">Related Articles</h2>
             <div className="grid gap-6 md:grid-cols-3">
               <Link href="/what-is-a-will" className="group">
-                <Card className="p-6 border-[#e8e3dc] hover:shadow-lg transition-all h-full">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#f5f2ed] mb-3">
-                    <FileText className="h-6 w-6 text-[#2d5f4e]" />
+                <Card className="p-6 border-border hover:shadow-lg transition-all h-full">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-background mb-3">
+                    <FileText className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="font-serif text-lg font-medium text-[#1a1a1a] mb-2 group-hover:text-[#2d5f4e]">
+                  <h3 className="font-serif text-lg font-medium text-foreground mb-2 group-hover:text-primary">
                     What is a Will?
                   </h3>
                   <p className="text-sm text-muted-foreground mb-3">
                     Learn about wills and how they form the foundation of estate planning.
                   </p>
-                  <span className="text-sm text-[#2d5f4e] font-medium inline-flex items-center gap-1">
+                  <span className="text-sm text-primary font-medium inline-flex items-center gap-1">
                     Read More <ArrowRight className="h-4 w-4" />
                   </span>
                 </Card>
               </Link>
 
               <Link href="/what-is-a-trust" className="group">
-                <Card className="p-6 border-[#e8e3dc] hover:shadow-lg transition-all h-full">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#f5f2ed] mb-3">
-                    <Shield className="h-6 w-6 text-[#2d5f4e]" />
+                <Card className="p-6 border-border hover:shadow-lg transition-all h-full">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-background mb-3">
+                    <Shield className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="font-serif text-lg font-medium text-[#1a1a1a] mb-2 group-hover:text-[#2d5f4e]">
+                  <h3 className="font-serif text-lg font-medium text-foreground mb-2 group-hover:text-primary">
                     What is a Trust?
                   </h3>
                   <p className="text-sm text-muted-foreground mb-3">
                     Discover how trusts can protect your assets and avoid probate entirely.
                   </p>
-                  <span className="text-sm text-[#2d5f4e] font-medium inline-flex items-center gap-1">
+                  <span className="text-sm text-primary font-medium inline-flex items-center gap-1">
                     Read More <ArrowRight className="h-4 w-4" />
                   </span>
                 </Card>
               </Link>
 
-              <Link href="/" className="group">
+              <Link href="/trust-vs-will" className="group">
+                <Card className="p-6 border-border hover:shadow-lg transition-all h-full">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-background mb-3">
+                    <Scale className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="font-serif text-lg font-medium text-foreground mb-2 group-hover:text-primary">
+                    Trust vs Will
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    Compare the key differences between trusts and wills to find the right solution.
+                  </p>
+                  <span className="text-sm text-primary font-medium inline-flex items-center gap-1">
+                    Read More <ArrowRight className="h-4 w-4" />
+                  </span>
+                </Card>
+              </Link>
+
+              <Link href="/examples" className="group">
                 <Card className="p-6 border-[#e8e3dc] hover:shadow-lg transition-all h-full">
                   <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#f5f2ed] mb-3">
                     <Scale className="h-6 w-6 text-[#2d5f4e]" />
                   </div>
                   <h3 className="font-serif text-lg font-medium text-[#1a1a1a] mb-2 group-hover:text-[#2d5f4e]">
-                    Trust vs Will
+                    Trust vs Will Examples
                   </h3>
                   <p className="text-sm text-muted-foreground mb-3">
-                    Compare the key differences between trusts and wills to find the right solution.
+                    See real-world scenarios comparing trusts and wills in action.
                   </p>
                   <span className="text-sm text-[#2d5f4e] font-medium inline-flex items-center gap-1">
                     Read More <ArrowRight className="h-4 w-4" />

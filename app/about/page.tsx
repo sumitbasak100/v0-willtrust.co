@@ -4,6 +4,18 @@ import { Card } from "@/components/ui/card"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import Link from "next/link"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "About Us | Our Mission and Story | WillTrust",
+  description:
+    "Learn about WillTrust's mission to make high-quality estate planning accessible, affordable, and actionable for everyone. Founded by seasoned estate attorneys.",
+  openGraph: {
+    title: "About Us | Our Mission and Story | WillTrust",
+    description: "Learn about WillTrust's mission to make high-quality estate planning accessible and affordable.",
+    type: "website",
+  },
+}
 
 export default function AboutPage() {
   return (
@@ -137,7 +149,7 @@ export default function AboutPage() {
             <Link href="/contact">
               <Button
                 size="lg"
-                className="bg-white text-primary hover:bg-white/90 px-10 h-16 rounded-md w-full sm:w-auto"
+                className="bg-white text-primary hover:bg-white/90 px-10 h-14 rounded-md w-full sm:w-auto"
               >
                 Start Your Plan <ArrowRight className="ml-2 h-6 w-6" />
               </Button>
@@ -146,7 +158,7 @@ export default function AboutPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white/10 px-10 h-16 rounded-md bg-transparent w-full sm:w-auto"
+                className="border-white text-white hover:bg-white/10 px-10 h-14 rounded-md bg-transparent w-full sm:w-auto"
               >
                 Contact Our Team
               </Button>

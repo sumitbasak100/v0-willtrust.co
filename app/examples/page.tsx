@@ -3,6 +3,18 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Real-World Estate Planning Examples | WillTrust",
+  description:
+    "See real-life scenarios comparing Trusts and Wills. Understand how different estate planning tools work in practice for families and individuals.",
+  openGraph: {
+    title: "Real-World Estate Planning Examples | WillTrust",
+    description: "See real-life scenarios comparing Trusts and Wills in action.",
+    type: "website",
+  },
+}
 
 export default function ExamplesPage() {
   return (
@@ -157,7 +169,10 @@ export default function ExamplesPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90 px-10 h-16 rounded-md w-full sm:w-auto">
+              <Button
+                size="lg"
+                className="bg-white text-primary hover:bg-white/90 px-10 h-16 rounded-md w-full sm:w-auto"
+              >
                 Start Your Estate Plan <ArrowRight className="ml-2 h-6 w-6" />
               </Button>
             </Link>

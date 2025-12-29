@@ -16,7 +16,20 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "WillTrust | Professional Estate Planning Solutions",
   description: "Secure your legacy with clarity and compassion. Expert guidance on Wills, Trusts, and Probate.",
-    generator: 'v0.app'
+  keywords: ["estate planning", "will", "trust", "probate", "living trust", "estate attorney", "inheritance planning"],
+  authors: [{ name: "WillTrust" }],
+  generator: "v0.app",
+  openGraph: {
+    title: "WillTrust | Professional Estate Planning Solutions",
+    description: "Secure your legacy with clarity and compassion. Expert guidance on Wills, Trusts, and Probate.",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "WillTrust | Professional Estate Planning Solutions",
+    description: "Secure your legacy with clarity and compassion. Expert guidance on Wills, Trusts, and Probate.",
+  },
 }
 
 export default function RootLayout({
