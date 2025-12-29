@@ -61,7 +61,7 @@ export default function Home() {
               <div className="mb-4 inline-flex items-center rounded-full bg-primary/10 px-4 py-1.5 text-xs font-bold text-primary uppercase tracking-widest">
                 Estate Planning Made Simple
               </div>
-              <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold lg:font-normal text-foreground leading-tight mb-4">
+              <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-foreground leading-tight mb-4">
                 Trust and Will: Understanding the Key Differences
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6 max-w-xl">
