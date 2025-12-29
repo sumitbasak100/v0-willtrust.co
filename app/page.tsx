@@ -57,7 +57,7 @@ export default function Home() {
       <section className="bg-background py-12 lg:py-16 overflow-hidden">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-2 items-center">
-            <div className="order-2 lg:order-1">
+            <div className="order-1">
               <div className="mb-4 inline-flex items-center rounded-full bg-primary/10 px-4 py-1.5 text-xs font-bold text-primary uppercase tracking-widest">
                 Estate Planning Made Simple
               </div>
@@ -93,7 +93,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="order-1 lg:order-2 relative h-[400px] lg:h-[550px] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="order-2 relative h-[400px] lg:h-[550px] rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src="/warm-family-gathering-dinner-table.jpg"
                 alt="Happy family sharing a meal together"
