@@ -14,10 +14,10 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://willtrust.vercel.app"),
+  metadataBase: new URL("https://willtrust.co"),
   title: {
-    default: "Trust and Will: The Difference Between a Trust and Will | WillTrust",
-    template: "%s | WillTrust",
+    default: "Trust and Will: The Difference Between a Trust and Will | WillTrust.co",
+    template: "%s | WillTrust.co",
   },
   description:
     "Understand the key differences between Trusts and Wills. Expert estate planning guidance on living trusts, last wills, probate avoidance, and protecting your legacy for your loved ones.",
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
     "will and testament",
     "estate administration",
   ],
-  authors: [{ name: "WillTrust" }],
-  creator: "WillTrust",
-  publisher: "WillTrust",
+  authors: [{ name: "WillTrust.co" }],
+  creator: "WillTrust.co",
+  publisher: "WillTrust.co",
   formatDetection: {
     email: false,
     address: false,
@@ -47,8 +47,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://willtrust.vercel.app",
-    siteName: "WillTrust",
+    url: "https://willtrust.co",
+    siteName: "WillTrust.co",
     title: "Trust and Will: The Difference Between a Trust and Will",
     description:
       "Expert estate planning guidance on living trusts, last wills, probate avoidance, and protecting your legacy for your loved ones.",
