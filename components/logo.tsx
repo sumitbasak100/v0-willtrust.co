@@ -15,8 +15,9 @@ export function Logo({ className }: { className?: string }) {
           className="h-5 w-5"
         >
           <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
-          <path d="M8 11h8" />
-          <path d="M12 8v6" />
+          <circle cx="12" cy="11" r="3" />
+          <path d="M12 14v4" />
+          <path d="M10 16h4" />
         </svg>
       </div>
       <span className="hidden sm:inline-block">
