@@ -9,10 +9,15 @@ export const metadata: Metadata = {
   title: "Real-World Estate Planning Examples | WillTrust",
   description:
     "See real-life scenarios comparing Trusts and Wills. Understand how different estate planning tools work in practice for families and individuals.",
+  alternates: {
+    canonical: "https://willtrust.vercel.app/examples",
+  },
   openGraph: {
     title: "Real-World Estate Planning Examples | WillTrust",
     description: "See real-life scenarios comparing Trusts and Wills in action.",
     type: "website",
+    url: "https://willtrust.vercel.app/examples",
+    images: ["/og-examples.jpg"],
   },
 }
 

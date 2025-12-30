@@ -10,10 +10,15 @@ export const metadata: Metadata = {
   title: "About Us | Our Mission and Story | WillTrust",
   description:
     "Learn about WillTrust's mission to make high-quality estate planning accessible, affordable, and actionable for everyone. Founded by seasoned estate attorneys.",
+  alternates: {
+    canonical: "https://willtrust.vercel.app/about",
+  },
   openGraph: {
     title: "About Us | Our Mission and Story | WillTrust",
     description: "Learn about WillTrust's mission to make high-quality estate planning accessible and affordable.",
     type: "website",
+    url: "https://willtrust.vercel.app/about",
+    images: ["/og-about.jpg"],
   },
 }
 
