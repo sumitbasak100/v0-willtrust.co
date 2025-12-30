@@ -1,9 +1,10 @@
 "use client"
 
 import Link from "next/link"
-import { Shield, Menu, X } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
+import { Logo } from "@/components/logo"
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -22,8 +23,7 @@ export function Header() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group relative z-50">
-            <Shield className="h-6 w-6 text-primary group-hover:scale-110 transition-transform" />
-            <span className="font-serif text-xl font-bold text-primary">Willtrust.co</span>
+            <Logo />
             <span className="sr-only">Home</span>
           </Link>
 

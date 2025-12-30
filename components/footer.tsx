@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Shield } from "lucide-react"
+import { Logo } from "@/components/logo"
 
 export function Footer() {
   return (
@@ -8,8 +8,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4 group cursor-pointer">
-              <Shield className="h-7 w-7 text-accent group-hover:scale-110 transition-transform" />
-              <span className="font-serif text-xl font-bold text-white">Willtrust.co</span>
+              <Logo className="text-white" />
             </Link>
             <p className="text-footer-foreground/60 leading-relaxed mb-6 text-sm">
               Helping families protect their legacy with comprehensive, compassion-led estate planning solutions.
