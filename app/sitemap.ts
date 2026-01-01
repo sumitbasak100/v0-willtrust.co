@@ -46,9 +46,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // 2️⃣ Fetch blog posts from WordPress
   const wpRes = await fetch(
     "https://blog.willtrust.co/wp-json/wp/v2/posts?per_page=100",
-    {
-      next: { revalidate: 3600 }, // revalidate every hour
-    }
+    { cache: "no-store" }
   )
 
   const posts = await wpRes.json()
