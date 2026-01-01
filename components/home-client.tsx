@@ -163,12 +163,11 @@ export function HomeClient() {
         {/* Trust and Will Definitions Section */}
         <section className="py-24 bg-white">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16 max-w-3xl mx-auto">
-              <p className="text-xs font-bold uppercase tracking-widest text-primary mb-3">Core Concepts</p>
-              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Trust and Will: Definition</h2>
-              <p className="text-lg text-muted-foreground">
-                Before choosing a path, it&apos;s essential to understand the fundamental legal structures that form the
-                basis of every effective estate plan.
+            <div className="text-center mb-16">
+              <p className="text-xs font-bold uppercase tracking-widest text-muted mb-3">Core Concepts</p>
+              <h2 className="font-serif text-3xl sm:text-4xl mb-4">Trust and Will: Definition</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Before choosing a path, it's essential to understand the fundamental legal structures that form the basis of every effective estate plan.
               </p>
             </div>
             <div className="grid lg:grid-cols-2 gap-20">
