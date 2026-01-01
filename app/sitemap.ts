@@ -1,9 +1,10 @@
 import type { MetadataRoute } from "next"
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://willtrust.co"
 
-  return [
+  // 1️⃣ Static pages
+  const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
       lastModified: new Date(),
@@ -41,4 +42,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
   ]
+
+  // 2️⃣ Fetch blog posts from WordPress
+  const wpRes = await fetch(
+    "https://blog.willtrust.co/wp-json/wp/v2/posts?per_page=100",
+    {
+      next: { revalidate: 3600 }, // revalidate every hour
+    }
+  )
+
+  const posts = await wpRes.json()
+
+  const blogPages: MetadataRoute.Sitemap = posts.map((post: any) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: post.modified,
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }))
+
+  // 3️⃣ Combine everything
+  return [...staticPages, ...blogPages]
 }
