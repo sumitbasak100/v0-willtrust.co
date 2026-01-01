@@ -16,6 +16,7 @@ export function Header() {
     { href: "/examples", label: "Examples" },
     { href: "/about", label: "About Us" },
     { href: "/contact", label: "Contact" },
+    { href: "/blog", label: "Blog" },
   ]
 
   return (
