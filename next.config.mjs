@@ -11,7 +11,7 @@ const nextConfig = {
     return [
       {
         source: '/blog/:path*',
-        destination: 'https://blog.yoursite.com/:path*',
+        destination: 'https://blog.willtrust.co/:path*',
       },
     ];
   },
