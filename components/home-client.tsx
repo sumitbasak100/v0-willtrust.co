@@ -151,7 +151,7 @@ export function HomeClient() {
                     <Users className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Trusted by</p>
+                    <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Trusted by</p>
                     <p className="text-lg font-serif font-bold text-primary">10,000+ families</p>
                   </div>
                 </div>
@@ -160,8 +160,16 @@ export function HomeClient() {
           </div>
         </section>
 
+        {/* Trust and Will Definitions Section */}
         <section className="py-24 bg-white">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <p className="text-xs font-bold uppercase tracking-widest text-muted mb-3">Core Concepts</p>
+              <h2 className="font-serif text-3xl sm:text-4xl mb-4">Trust and Will: Definition</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Before choosing a path, it's essential to understand the fundamental legal structures that form the basis of every effective estate plan.
+              </p>
+            </div>
             <div className="grid lg:grid-cols-2 gap-20">
               {/* Will Column */}
               <div id="will" className="space-y-6">
@@ -344,7 +352,7 @@ export function HomeClient() {
           <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <p className="text-xs font-bold uppercase tracking-widest text-muted mb-2">Common Questions</p>
-              <h2 className="font-serif text-3xl sm:text-4xl mb-4">Frequently Asked Questions</h2>
+              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl mb-4">Frequently Asked Questions</h2>
               <p className="text-muted-foreground">Get answers to the most common questions about Trusts and Wills.</p>
             </div>
             <Accordion type="single" collapsible className="space-y-4">
