@@ -37,8 +37,15 @@ async function getRelatedPosts(currentPostId: number) {
   }
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const post = await getPost(params.slug)
+// ✅ FIX: params is now a Promise
+export async function generateMetadata({ 
+  params 
+}: { 
+  params: Promise<{ slug: string }> 
+}): Promise<Metadata> {
+  // ✅ FIX: Await params before accessing slug
+  const { slug } = await params
+  const post = await getPost(slug)
 
   if (!post) {
     return {
@@ -52,13 +59,13 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     title: `${post.title.rendered} | WillTrust Blog`,
     description: post.excerpt.rendered.replace(/<[^>]*>/g, "").substring(0, 160),
     alternates: {
-      canonical: `https://willtrust.vercel.app/blog/${params.slug}`,
+      canonical: `https://willtrust.vercel.app/blog/${slug}`,
     },
     openGraph: {
       title: post.title.rendered,
       description: post.excerpt.rendered.replace(/<[^>]*>/g, "").substring(0, 160),
       type: "article",
-      url: `https://willtrust.vercel.app/blog/${params.slug}`,
+      url: `https://willtrust.vercel.app/blog/${slug}`,
       images: featuredImage ? [featuredImage] : [],
       publishedTime: post.date,
       modifiedTime: post.modified,
@@ -83,8 +90,15 @@ function calculateReadingTime(content: string) {
   return minutes
 }
 
-export default async function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = await getPost(params.slug)
+// ✅ FIX: params is now a Promise
+export default async function BlogPostPage({ 
+  params 
+}: { 
+  params: Promise<{ slug: string }> 
+}) {
+  // ✅ FIX: Await params before accessing slug
+  const { slug } = await params
+  const post = await getPost(slug)
 
   if (!post) {
     notFound()
