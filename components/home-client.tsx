@@ -140,7 +140,7 @@ export function HomeClient() {
               </div>
               <div className="order-2 relative h-[400px] lg:h-[550px] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/image (2).png"
+                  src="/image.jpg"
                   alt="Happy family sharing a meal together"
                   fill
                   className="object-cover"
