@@ -1,4 +1,7 @@
-<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="100" height="100" rx="20" fill="#2d5f4e"/>
-  <path d="M50 85C50 85 80 70 80 47.5V23.75L50 12.5L20 23.75V47.5C20 70 50 85 50 85Z" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Rounded rectangle background -->
+  <rect width="200" height="200" rx="40" fill="#0a0a0a"/>
+  
+  <!-- Green "W" letter - simple bold font -->
+  <text x="100" y="155" font-family="Arial, sans-serif" font-size="150" font-weight="bold" fill="#48d33a" text-anchor="middle">W</text>
 </svg>
