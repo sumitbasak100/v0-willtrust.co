@@ -13,6 +13,16 @@ const nextConfig = {
       },
     ],
   },
+  
+  async redirects() {
+    return [
+      {
+        source: '/admin',
+        destination: 'https://blog.willtrust.co/wp-admin',
+        permanent: false, 
+      },
+    ];
+  },
 };
 
 export default nextConfig;
