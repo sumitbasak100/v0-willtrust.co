@@ -8,11 +8,15 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Calendar, Clock, ArrowLeft, ArrowRight } from "lucide-react"
 
+// ✅ Cache for 1 hour - individual posts rarely change after publishing
+export const revalidate = 3600 // Revalidate every 1 hour
+
 async function getPost(slug: string) {
   try {
     const res = await fetch(
       `https://blog.willtrust.co/wp-json/wp/v2/posts?slug=${slug}&_embed`,
-      { cache: "no-store" }
+      // ✅ Cache for 1 hour
+      { next: { revalidate: 3600 } }
     )
     if (!res.ok) throw new Error("Failed to fetch post")
     const posts = await res.json()
@@ -27,7 +31,8 @@ async function getRelatedPosts(currentPostId: number) {
   try {
     const res = await fetch(
       `https://blog.willtrust.co/wp-json/wp/v2/posts?per_page=3&exclude=${currentPostId}&_embed`,
-      { cache: "no-store" }
+      // ✅ Cache for 1 hour
+      { next: { revalidate: 3600 } }
     )
     if (!res.ok) throw new Error("Failed to fetch related posts")
     return res.json()
@@ -37,13 +42,11 @@ async function getRelatedPosts(currentPostId: number) {
   }
 }
 
-// ✅ FIX: params is now a Promise
 export async function generateMetadata({ 
   params 
 }: { 
   params: Promise<{ slug: string }> 
 }): Promise<Metadata> {
-  // ✅ FIX: Await params before accessing slug
   const { slug } = await params
   const post = await getPost(slug)
 
@@ -90,13 +93,11 @@ function calculateReadingTime(content: string) {
   return minutes
 }
 
-// ✅ FIX: params is now a Promise
 export default async function BlogPostPage({ 
   params 
 }: { 
   params: Promise<{ slug: string }> 
 }) {
-  // ✅ FIX: Await params before accessing slug
   const { slug } = await params
   const post = await getPost(slug)
 
