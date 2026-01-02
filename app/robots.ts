@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/api/",
     },
-    sitemap: "https://trust-and-will-guide.vercel.app/sitemap.xml",
+    sitemap: "https://willtrust.co/sitemap.xml",
   }
 }
