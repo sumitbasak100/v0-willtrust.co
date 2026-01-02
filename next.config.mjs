@@ -5,15 +5,13 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
-  },
-
-  async rewrites() {
-    return [
+    remotePatterns: [
       {
-        source: '/blog/:path*',
-        destination: 'https://blog.willtrust.co/:path*',
+        protocol: 'https',
+        hostname: 'blog.willtrust.co',
+        pathname: '/**',
       },
-    ];
+    ],
   },
 };
 
