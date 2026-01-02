@@ -140,21 +140,12 @@ export function HomeClient() {
               </div>
               <div className="order-2 relative h-[400px] lg:h-[550px] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/warm-family-gathering-dinner-table.jpg"
+                  src="/image (2).png"
                   alt="Happy family sharing a meal together"
                   fill
                   className="object-cover"
                   priority
                 />
-                <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-lg flex items-center gap-3">
-                  <div className="bg-primary/10 p-2 rounded-lg">
-                    <Users className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Trusted by</p>
-                    <p className="text-lg font-serif font-bold text-primary">10,000+ families</p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
