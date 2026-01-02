@@ -21,10 +21,14 @@ export const metadata: Metadata = {
   },
 }
 
+// ✅ Cache for 30 minutes - blog listing doesn't need to be super fresh
+export const revalidate = 1800 // Revalidate every 30 minutes
+
 async function getPosts() {
   try {
     const res = await fetch("https://blog.willtrust.co/wp-json/wp/v2/posts?per_page=100&_embed", {
-      cache: "no-store",
+      // ✅ Cache for 30 minutes
+      next: { revalidate: 1800 }
     })
     if (!res.ok) throw new Error("Failed to fetch posts")
     return res.json()
